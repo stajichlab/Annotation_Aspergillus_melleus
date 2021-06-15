@@ -1,13 +1,8 @@
 #!/bin/bash
 #SBATCH --ntasks 24 --nodes 1 --mem 96G -p intel
 #SBATCH --time 72:00:00 --out logs/iprscan.%a.log
-module unload miniconda2
-module unload miniconda3
-module load anaconda3
 module load funannotate
-module unload perl
-module unload python
-module load iprscan/ 5.51-85.0
+module load iprscan/5.51-85.0
 CPU=1
 if [ ! -z $SLURM_CPUS_ON_NODE ]; then
   CPU=$SLURM_CPUS_ON_NODE

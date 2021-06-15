@@ -1,8 +1,7 @@
 #!/bin/bash
-#SBATCH -p batch --time 5-0:00:00 --ntasks 16 --nodes 1 --mem 24G --out logs/update.%a.log
+#SBATCH -p intel,batch --time 5-0:00:00 --ntasks 16 --nodes 1 --mem 64gb --out logs/update.%a.log
 
 module load funannotate
-
 #PASAHOMEPATH=$(dirname `which Launch_PASA_pipeline.pl`)
 #TRINITYHOMEPATH=$(dirname `which Trinity`)
 
@@ -16,6 +15,7 @@ fi
 INDIR=genomes
 OUTDIR=annotate
 SAMPFILE=samples.csv
+RNAFOLDER=lib/RNASeq
 
 N=${SLURM_ARRAY_TASK_ID}
 
@@ -44,5 +44,5 @@ tail -n +2 $SAMPFILE | sed -n ${N}p | while read SPECIES STRAIN PHYLUM BIOSAMPLE
 do
   #  defaults to using sqlite - if you used mysql in the 02_train_RNASeq.sh step then you would add '--pasa_db mysql' to the options
   BASE=$(echo -n "$SPECIES $STRAIN" | perl -p -e 's/\s+/_/g')
-  funannotate update --cpus $CPU -i $OUTDIR/$BASE --out $OUTDIR/$BASE --sbt $SBT --memory $MEM --pasa_db mysql
+  funannotate update --cpus $CPU -i $OUTDIR/$BASE --out $OUTDIR/$BASE --sbt $SBT --memory $MEM --pasa_db mysql  --trinity $RNAFOLDER/$SPECIESNOSPACE/assembled.fasta
 done

@@ -1,11 +1,7 @@
 #!/bin/bash
-#SBATCH --nodes 1 --ntasks 8 --mem 16G --out logs/antismash.%a.log -J antismash
+#SBATCH --nodes 1 --ntasks 8 --mem 16G --out logs/antismash.%a.log -J antismash -p intel,batch
 
-module unload miniconda2
-module unload miniconda3
-module load anaconda3
-module load antismash/5.1.2
-module load antismash/5.1.2
+module load antismash/5.2.0
 which perl
 which antismash
 hostname
@@ -30,7 +26,7 @@ if [ $N -gt $MAX ]; then
   exit
 fi
 
-INPUTFOLDER=predict_results
+INPUTFOLDER=update_results
 
 IFS=,
 tail -n +2 $SAMPFILE | sed -n ${N}p | while read SPECIES STRAIN PHYLUM BIOSAMPLE BIOPROJECT LOCUSTAG
@@ -48,10 +44,10 @@ do
   echo "processing $OUTDIR/$name"
   if [[ ! -d $OUTDIR/$name/antismash_local && ! -s $OUTDIR/$name/antismash_local/index.html ]]; then
     #	antismash --taxon fungi --output-dir $OUTDIR/$name/antismash_local  --genefinding-tool none \
-      #    --asf --fullhmmer --cassis --clusterhmmer --asf --cb-general --pfam2go --cb-subclusters --cb-knownclusters -c $CPU \
+          #--asf --fullhmmer --cassis --clusterhmmer --asf --cb-general --pfam2go --cb-subclusters --cb-knownclusters -c $CPU \
       #    $OUTDIR/$name/$INPUTFOLDER/*.gbk
     time antismash --taxon fungi --output-dir $OUTDIR/$name/antismash_local \
-      --genefinding-tool none --fullhmmer --clusterhmmer --cb-general \
+      --genefinding-tool none --fullhmmer --clusterhmmer --cb-general --asf --cb-subclusters --cb-knownclusters \
       --pfam2go -c $CPU $OUTDIR/$name/$INPUTFOLDER/*.gbk
   fi
 done
