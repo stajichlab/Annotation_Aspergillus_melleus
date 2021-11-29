@@ -11,7 +11,7 @@ module unload perl
 module unload python
 module load funannotate
 module load phobius
-
+export AUGUSTUS_CONFIG_PATH=$(realpath lib/augustus/3.3/config)
 export FUNANNOTATE_DB=/bigdata/stajichlab/shared/lib/funannotate_db
 CPUS=$SLURM_CPUS_ON_NODE
 OUTDIR=annotate

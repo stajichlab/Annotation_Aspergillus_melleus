@@ -45,26 +45,6 @@ Submit-block ::= {
             title ""
           }
         },
-        {
-          name name {
-            last "Vazquez",
-            first "C",
-            middle "",
-            initials "",
-            suffix "",
-            title ""
-          }
-        },
-        {
-          name name {
-            last "Patino",
-            first "B",
-            middle "",
-            initials "",
-            suffix "",
-            title ""
-          }
-        }
       },
       affil std {
         affil "University of California-Riverside",
