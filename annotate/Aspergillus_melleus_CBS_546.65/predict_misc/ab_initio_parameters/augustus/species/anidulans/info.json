@@ -1,0 +1,1 @@
+{"augustus": [{"version": "AUGUSTUS (3.3.3)", "source": "augustus pre-trained", "date": "2021-03-15", "path": "/bigdata/stajichlab/shared/lib/funannotate_db/trained_species/anidulans/augustus"}], "genemark": [{}], "codingquarry": [{}], "snap": [{}], "glimmerhmm": [{}]}
