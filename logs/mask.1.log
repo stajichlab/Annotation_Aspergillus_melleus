@@ -1,0 +1,24 @@
+Aspergillus_melleus_CBS_546.65
+Loading funannotate/1.8
+  Loading requirement: ncbi-rmblast/2.9.0-p2 trf/4.09 hmmer/3 RepeatMasker/4-1-1
+    jellyfish/2.3.0 lp_solve/5.5 EVM/1.1.1-live genemarkESET/4.62_lic
+    bamtools/2.4.0 RepeatScout/1.0.6 RECON/1.08 cd-hit/4.8.1 ncbi-blast/2.9.0+
+    RepeatModeler/2.0.1 gmap/2019-03-04 bedtools/2.29.2 tbl2asn/25.8
+    boost/1.68.0 augustus/3.3.3 diamond/2.0.8 exonerate/2.2.0 ncbi-blast/2.2.31+
+    cdbfasta/06272015 htslib/1.11 samtools/1.11 braker/2.1.4 mummer/4.0
+    RAxML/8.2.12 mafft/7.427 trimal/1.4.1 trimmomatic/0.36 exonerate/2.4.0
+    blat/35 tRNAscan/1.3.1 proteinortho/6.0.20 kent/318 signalp/5.0b
+    fasta/36.3.8h bowtie2/2.4.1 salmon/0.9.1 trinity-rnaseq/2.11.0 hisat2/2.2.1
+    kallisto/0.46.2 gmap/2017-11-15 PASA/2.4.1 eggnog-mapper/2.1.0 minimap2/2.17
+    stringtie/2.1.1 CodingQuarry/2.0
+LIBRARY is /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/repeat_library/Aspergillus_melleus_CBS_546.65.repeatmodeler-library.fasta
+[Jun 13 02:21 PM]: OS: CentOS Linux 7, 96 cores, ~ 527 GB RAM. Python: 3.8.5
+[Jun 13 02:21 PM]: Running funanotate v1.8.8
+[Jun 13 02:21 PM]: Soft-masking: running RepeatMasker with custom library
+[Jun 13 02:22 PM]: Repeat soft-masking finished: 
+Masked genome: /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/genomes/Aspergillus_melleus_CBS_546.65.masked.fasta
+num scaffolds: 11
+assembly size: 38,850,827 bp
+masked repeats: 3,265,332 bp (8.40%)
+-------------------------------------------------------
+-------------------------------------------------------

@@ -1,0 +1,14 @@
+Loading antismash/5.2.0
+  Loading requirement: hmmer/2 hmmer/3 fasttree/2.1.11 diamond/2.0.8
+    prodigal/2.6.2 ncbi-blast/2.9.0+ muscle/3.8.425 glimmerhmm/3.0.4 meme/4.11.2
+/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/bin/perl
+/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/antismash5_2/bin/antismash
+c15
+Aspergillus_melleus_CBS_546.65
+processing annotate/Aspergillus_melleus_CBS_546.65
+/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/antismash5_2/lib/python3.9/site-packages/scss/selector.py:26: FutureWarning: Possible nested set at position 329
+  SELECTOR_TOKENIZER = re.compile(r'''
+
+real	268m48.014s
+user	328m28.744s
+sys	161m34.602s

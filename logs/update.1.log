@@ -1,0 +1,75 @@
+Loading funannotate/1.8
+  Loading requirement: ncbi-rmblast/2.9.0-p2 trf/4.09 hmmer/3 RepeatMasker/4-1-1
+    jellyfish/2.3.0 lp_solve/5.5 EVM/1.1.1-live genemarkESET/4.62_lic
+    bamtools/2.4.0 RepeatScout/1.0.6 RECON/1.08 cd-hit/4.8.1 ncbi-blast/2.9.0+
+    RepeatModeler/2.0.1 gmap/2019-03-04 bedtools/2.29.2 tbl2asn/25.8
+    boost/1.68.0 augustus/3.3.3 diamond/2.0.8 exonerate/2.2.0 ncbi-blast/2.2.31+
+    cdbfasta/06272015 htslib/1.11 samtools/1.11 braker/2.1.4 mummer/4.0
+    RAxML/8.2.12 mafft/7.427 trimal/1.4.1 trimmomatic/0.36 exonerate/2.4.0
+    blat/35 tRNAscan/1.3.1 proteinortho/6.0.20 kent/318 signalp/5.0b
+    fasta/36.3.8h bowtie2/2.4.1 salmon/0.9.1 java/13 trinity-rnaseq/2.11.0
+    hisat2/2.2.1 kallisto/0.46.2 gmap/2017-11-15 PASA/2.4.1 eggnog-mapper/2.1.0
+    minimap2/2.17 stringtie/2.1.1 CodingQuarry/2.0
+[Jun 14 10:27 PM]: OS: CentOS Linux 7, 64 cores, ~ 528 GB RAM. Python: 3.8.5
+[Jun 14 10:27 PM]: Running 1.8.8
+[Jun 14 10:27 PM]: Found relevant files in annotate/Aspergillus_melleus_CBS_546.65/training, will re-use them:
+	Forward reads: annotate/Aspergillus_melleus_CBS_546.65/training/left.fq.gz
+	Reverse reads: annotate/Aspergillus_melleus_CBS_546.65/training/right.fq.gz
+	Trinity results: annotate/Aspergillus_melleus_CBS_546.65/training/funannotate_train.trinity-GG.fasta
+	PASA config file: annotate/Aspergillus_melleus_CBS_546.65/training/pasa/alignAssembly.txt
+	BAM alignments: annotate/Aspergillus_melleus_CBS_546.65/training/funannotate_train.coordSorted.bam
+[Jun 14 10:27 PM]: Reannotating Aspergillus melleus, NCBI accession: None
+[Jun 14 10:27 PM]: Previous annotation consists of: 12,841 protein coding gene models and 213 non-coding gene models
+[Jun 14 10:27 PM]: Trimmomatic will be skipped
+[Jun 14 10:27 PM]: Read normalization will be skipped
+[Jun 14 10:27 PM]: Existing BAM alignments found: annotate/Aspergillus_melleus_CBS_546.65/update_misc/trinity.alignments.bam, annotate/Aspergillus_melleus_CBS_546.65/update_misc/transcript.alignments.bam
+[Jun 14 10:27 PM]: Existing PASA database contains 10,658 gene models, validated FASTA headers match
+[Jun 14 10:27 PM]: Running PASA annotation comparison step 1
+[Jun 14 10:42 PM]: Running PASA annotation comparison step 2
+[Jun 14 10:59 PM]: Using Kallisto TPM data to determine which PASA gene models to select at each locus
+[Jun 14 10:59 PM]: Building Kallisto index
+[Jun 14 11:00 PM]: Mapping reads using pseudoalignment in Kallisto
+[Jun 14 11:04 PM]: Parsing Kallisto results. Keeping alt-splicing transcripts if expressed at least 10.0% of highest transcript per locus.
+[Jun 14 11:04 PM]: Wrote 13,183 transcripts derived from 12,850 protein coding loci.
+[Jun 14 11:04 PM]: Validating gene models (renaming, checking translations, filtering, etc)
+[Jun 14 11:04 PM]: Writing 13,061 loci to TBL format: dropped 0 overlapping, 1 too short, and 0 frameshift gene models
+[Jun 14 11:04 PM]: Converting to Genbank format
+[Jun 14 11:06 PM]: Collecting final annotation files
+[Jun 14 11:07 PM]: Parsing GenBank files...comparing annotation
+[Jun 14 11:14 PM]: Updated annotation complete:
+-------------------------------------------------------
+Total Gene Models:	13,061
+Total transcripts:	13,395
+New Gene Models:	19
+No Change:		10,595
+Update UTRs:		2,444
+Exons Changed:		3
+Exons/CDS Changed:	0
+Dropped Models:		0
+CDS AED:		0.002
+mRNA AED:		0.024
+-------------------------------------------------------
+[Jun 14 11:14 PM]: Funannotate update is finished, output files are in the annotate/Aspergillus_melleus_CBS_546.65/update_results folder
+[Jun 14 11:14 PM]: There are 3 gene models that need to be fixed.
+[Jun 14 11:14 PM]: Manually edit the tbl file annotate/Aspergillus_melleus_CBS_546.65/update_results/Aspergillus_melleus_CBS_546.65.tbl, then run:
+
+funannotate fix -i annotate/Aspergillus_melleus_CBS_546.65/update_results/Aspergillus_melleus_CBS_546.65.gbk -t annotate/Aspergillus_melleus_CBS_546.65/update_results/Aspergillus_melleus_CBS_546.65.tbl
+
+[Jun 14 11:14 PM]: After the problematic gene models are fixed, you can proceed with functional annotation.
+[Jun 14 11:14 PM]: Your next step might be functional annotation, suggested commands:
+-------------------------------------------------------
+Run InterProScan (Docker required): 
+funannotate iprscan -i annotate/Aspergillus_melleus_CBS_546.65 -m docker -c 16
+
+Run antiSMASH: 
+funannotate remote -i annotate/Aspergillus_melleus_CBS_546.65 -m antismash -e youremail@server.edu
+
+Annotate Genome: 
+funannotate annotate -i annotate/Aspergillus_melleus_CBS_546.65 --cpus 16 --sbt yourSBTfile.txt
+-------------------------------------------------------
+                
+-------------------------------------------------------
+-------------------------------------------------------
+I1I15_013063	Feature overlapped by 2 identical-length genes but has no cross-reference
+I1I15_013064	Feature overlapped by 2 identical-length genes but has no cross-reference
+-------------------------------------------------------

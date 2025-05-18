@@ -1,0 +1,11 @@
+[06/14/21 23:20:14]: /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/bin/funannotate fix -i annotate/Aspergillus_melleus_CBS_546.65/update_results/Aspergillus_melleus_CBS_546.65.gbk -t annotate/Aspergillus_melleus_CBS_546.65/update_results/Aspergillus_melleus_CBS_546.65.tbl
+
+[06/14/21 23:20:14]: OS: CentOS Linux 7, 32 cores, ~ 66 GB RAM. Python: 3.8.5
+[06/14/21 23:20:14]: Running 1.8.8
+[06/14/21 23:20:35]: Extracting genome sequence and parsing meta information
+[06/14/21 23:20:46]: 11 contigs containing 13,183 protein coding genes and 212 tRNA genes
+[06/14/21 23:20:58]: Found pre-existing funannotate files, archiving to annotate/Aspergillus_melleus_CBS_546.65/update_results/archive_73689955-033b-42b3-8227-f645bf6d2690
+[06/14/21 23:20:58]: Converting to GenBank format
+[06/14/21 23:20:58]: /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/bin/python3.8 /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/lib/python3.8/site-packages/funannotate/aux_scripts/tbl2asn_parallel.py -i annotate/Aspergillus_melleus_CBS_546.65/update_results/tbl2asn/genome.tbl -f annotate/Aspergillus_melleus_CBS_546.65/update_results/tbl2asn/genome.fsa -o annotate/Aspergillus_melleus_CBS_546.65/update_results/tbl2asn --sbt /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/lib/python3.8/site-packages/funannotate/config/test.sbt -d annotate/Aspergillus_melleus_CBS_546.65/update_results/Aspergillus_melleus_CBS_546.65.discrepency.txt -s Aspergillus melleus -t -l paired-ends -v 1 -c 4 --strain CBS 546.65
+[06/14/21 23:23:49]: Generating output files.
+[06/14/21 23:24:45]: Output genome consists of: 11 contigs containing 13,182 protein coding genes and 212 tRNA genes
