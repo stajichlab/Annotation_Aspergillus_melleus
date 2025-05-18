@@ -1,0 +1,146 @@
+[06/14/21 16:49:44]: /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/bin/funannotate predict --cpus 24 --keep_no_stops --SeqCenter UCR_Harvard --busco_db fungi_odb10 --optimize_augustus --strain CBS 546.65 --min_training_models 100 --AUGUSTUS_CONFIG_PATH /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/lib/augustus/3.3/config -i ../genomes/Aspergillus_melleus_CBS_546.65.masked.fasta --name I1I15 -s Aspergillus melleus -o ../annotate/Aspergillus_melleus_CBS_546.65
+
+[06/14/21 16:49:44]: OS: CentOS Linux 7, 64 cores, ~ 528 GB RAM. Python: 3.8.5
+[06/14/21 16:49:44]: Running funannotate v1.8.8
+[06/14/21 16:49:44]: GeneMark path: /opt/linux/centos/7.x/x86_64/pkgs/genemarkESET/4.62_lic
+[06/14/21 16:49:47]: Full path to gmes_petap.pl: /opt/linux/centos/7.x/x86_64/pkgs/genemarkESET/4.62_lic/gmes_petap.pl
+[06/14/21 16:49:47]: GeneMark appears to be functional? True
+[06/14/21 16:49:48]: Found training files, will re-use these files:
+  --rna_bam ../annotate/Aspergillus_melleus_CBS_546.65/training/funannotate_train.coordSorted.bam
+  --pasa_gff ../annotate/Aspergillus_melleus_CBS_546.65/training/funannotate_train.pasa.gff3
+  --transcript_alignments ../annotate/Aspergillus_melleus_CBS_546.65/training/funannotate_train.transcripts.gff3
+[06/14/21 16:49:49]: {'augustus': 1, 'hiq': 2, 'genemark': 1, 'pasa': 6, 'codingquarry': 2, 'snap': 1, 'glimmerhmm': 1, 'proteins': 1, 'transcripts': 1}
+[06/14/21 16:49:55]: {'augustus': 'pasa', 'genemark': 'selftraining', 'snap': 'pasa', 'glimmerhmm': 'pasa', 'codingquarry': 'rna-bam'}
+[06/14/21 16:49:55]: Parsed training data, run ab-initio gene predictors as follows:
+[06/14/21 16:49:57]: perl /opt/linux/centos/7.x/x86_64/pkgs/EVM/1.1.1-live/EvmUtils/gff3_gene_prediction_file_validator.pl /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/pasa_predictions.gff3
+[06/14/21 16:49:58]: {'augustus': 1, 'hiq': 2, 'genemark': 1, 'pasa': 6, 'codingquarry': 2, 'snap': 1, 'glimmerhmm': 1, 'proteins': 1, 'transcripts': 1}
+[06/14/21 16:50:15]: Loading genome assembly and parsing soft-masked repetitive sequences
+[06/14/21 16:50:18]: Genome loaded: 11 scaffolds; 38,850,827 bp; 8.40% repeats masked
+[06/14/21 16:50:19]: Parsed 19,161 transcript alignments from: ../annotate/Aspergillus_melleus_CBS_546.65/training/funannotate_train.transcripts.gff3
+[06/14/21 16:50:19]: Creating transcript EVM alignments and Augustus transcripts hintsfile
+[06/14/21 16:50:21]: Existing RNA-seq BAM hints found: ../annotate/Aspergillus_melleus_CBS_546.65/predict_misc/hints.BAM.gff
+[06/14/21 16:50:34]: Existing protein alignments found: ../annotate/Aspergillus_melleus_CBS_546.65/predict_misc/protein_alignments.gff3
+[06/14/21 16:50:40]: join_mult_hints.pl
+[06/14/21 16:50:42]: Existing GeneMark annotation found: ../annotate/Aspergillus_melleus_CBS_546.65/predict_misc/genemark.gff
+[06/14/21 16:50:42]: perl /opt/linux/centos/7.x/x86_64/pkgs/EVM/1.1.1-live/EvmUtils/misc/augustus_GFF3_to_EVM_GFF3.pl ../annotate/Aspergillus_melleus_CBS_546.65/predict_misc/genemark.gff
+[06/14/21 16:50:47]: 12,494 predictions from GeneMark
+[06/14/21 16:50:47]: Filtering PASA data for suitable training set
+[06/14/21 16:50:51]: filterGenemark.pl /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/pasa.training.tmp.gtf /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/hints.ALL.gff
+[06/14/21 16:50:56]: 4,641 PASA genes; 2,071 have multi-CDS; 1,250 from filterGeneMark; 673 have multi-CDS
+[06/14/21 16:50:56]: filterGeneMark GTF filter set to True; require genes with multiple CDS set to True
+[06/14/21 16:50:57]: diamond makedb --in augustus.training.proteins.fa --db aug_training.dmnd
+[06/14/21 16:50:58]: diamond blastp --query augustus.training.proteins.fa --db aug_training.dmnd --more-sensitive -o aug.blast.txt -f 6 qseqid sseqid pident --query-cover 80 --subject-cover 80 --id 80 --no-self-hits
+[06/14/21 16:51:02]: 0 models fail blast identity threshold
+[06/14/21 16:51:02]: 3,968 models will be ignored for training Augustus
+[06/14/21 16:51:04]: 667 of 4,641 models pass training parameters
+[06/14/21 16:51:04]: Training Augustus using PASA gene models
+[06/14/21 16:51:04]: gff2gbSmallDNA.pl ../annotate/Aspergillus_melleus_CBS_546.65/predict_misc/final_training_models.gff3 /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/genome.softmasked.fa 600 ../annotate/Aspergillus_melleus_CBS_546.65/predict_misc/augustus.training.pasa.gb
+[06/14/21 16:51:23]: Augustus initial training results:
+[06/14/21 17:24:33]: Augustus optimized training results:
+[06/14/21 17:24:33]: Running Augustus gene prediction using aspergillus_melleus_cbs_546.65 parameters
+[06/14/21 17:28:14]: perl /opt/linux/centos/7.x/x86_64/pkgs/EVM/1.1.1-live/EvmUtils/misc/augustus_GFF3_to_EVM_GFF3.pl ../annotate/Aspergillus_melleus_CBS_546.65/predict_misc/augustus.gff3
+[06/14/21 17:28:17]: Pulling out high quality Augustus predictions
+[06/14/21 17:28:18]: Found 4,308 high quality predictions from Augustus (>90% exon evidence)
+[06/14/21 17:28:19]: Running stringie on RNA-seq alignments 
+[06/14/21 17:28:19]: stringtie -p 24 /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/training/trinity.alignments.bam
+[06/14/21 17:28:21]: Running CodingQuarry prediction using stringtie alignments
+[06/14/21 17:28:21]: CodingQuarry -p 24 -f /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/genome.softmasked.fa -t /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/stringtie.gff3
+[06/14/21 17:59:54]: The environmental variable QUARRY_PATH is set as: /opt/linux/centos/7.x/x86_64/pkgs/CodingQuarry/2.0/QuarryFiles
+STAGE 1
+Prediction from transcript sequences, run 1 of 2...
+Prediction from transcript sequences, run 2 of 2...
+STAGE 1 complete
+Training..
+Intron training complete
+printed parameters
+Remove single-exon predictions
+Select prediction regions
+Predict from genome sequences
+STAGE 2 complete
+Additional gene discovery
+Additional gene discovery complete
+
+
+Thank you for using CodingQuarry. If you found our program useful, please cite
+us!
+
+Testa AC, Hane JK, Ellwood SR, Oliver RP. CodingQuarry:
+highly accurate hidden Markov model gene prediction in fungal
+genomes using RNA-seq transcripts. BMC genomics. 2016;16:170.
+
+
+[06/14/21 17:59:55]: 14,242 predictions from CodingQuarry
+[06/14/21 17:59:55]: Running SNAP gene prediction, using training data: ../annotate/Aspergillus_melleus_CBS_546.65/predict_misc/final_training_models.gff3
+[06/14/21 17:59:56]: 667 gene models to train snap on 9 scaffolds
+[06/14/21 17:59:56]: fathom /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/snap.training.zff /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/snap-training.scaffolds.fasta -categorize 1000 -min-intron 10 -max-intron 3000
+[06/14/21 17:59:59]: fathom uni.ann uni.dna -export 1000 -plus
+[06/14/21 18:00:00]: forge export.ann export.dna
+[06/14/21 18:00:03]: perl /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/bin/hmm-assembler.pl snap-trained ../annotate/Aspergillus_melleus_CBS_546.65/predict_misc/snaptrain
+[06/14/21 18:00:03]: snap /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/snap-trained.hmm /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/genome.softmasked.fa
+[06/14/21 18:05:00]: 10,607 predictions from SNAP
+[06/14/21 18:05:00]: Running GlimmerHMM gene prediction, using training data: ../annotate/Aspergillus_melleus_CBS_546.65/predict_misc/final_training_models.gff3
+[06/14/21 18:05:01]: trainGlimmerHMM /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/genome.softmasked.fa /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/glimmer.exons -d ../annotate/Aspergillus_melleus_CBS_546.65/predict_misc/glimmerhmm
+[06/14/21 18:10:55]: perl /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/bin/glimmhmm.pl /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/bin/glimmerhmm /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/genome.softmasked.fa /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/glimmerhmm -g
+[06/14/21 18:15:33]: 12,068 predictions from GlimmerHMM
+[06/14/21 18:15:34]: Prediction sources: ['HiQ', 'Augustus', 'CodingQuarry', 'GeneMark', 'GlimmerHMM', 'pasa', 'snap']
+[06/14/21 18:15:36]: Summary of gene models: {'total': 64455, 'HiQ': 4308, 'Augustus': 6095, 'CodingQuarry': 14242, 'GeneMark': 12494, 'GlimmerHMM': 12068, 'pasa': 4641, 'snap': 10607}
+[06/14/21 18:15:36]: EVM Weights: {'HiQ': 2, 'Augustus': 1, 'CodingQuarry': 2, 'GeneMark': 1, 'GlimmerHMM': 1, 'pasa': 6, 'snap': 1, 'proteins': 1, 'transcripts': 1}
+[06/14/21 18:15:36]: Summary of gene models passed to EVM (weights):
+[06/14/21 18:15:36]: Launching EVM via funannotate-runEVM.py
+[06/14/21 18:15:36]: /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/bin/python3.8 /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/lib/python3.8/site-packages/funannotate/aux_scripts/funannotate-runEVM.py -w /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/weights.evm.txt -c 24 -g /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/gene_predictions.gff3 -d /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM -f /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/genome.softmasked.fa -l ../annotate/Aspergillus_melleus_CBS_546.65/logfiles/funannotate-EVM.log -m 10 -i 1500 -o /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/evm.round1.gff3 --EVM_HOME /opt/linux/centos/7.x/x86_64/pkgs/EVM/1.1.1-live -p /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/protein_alignments.gff3 -t /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/transcript_alignments.gff3
+[06/14/21 18:50:44]: 12,974 total gene models from EVM
+[06/14/21 18:50:44]: Generating protein fasta files from 12,974 EVM models
+[06/14/21 18:50:57]: now filtering out bad gene models (< 50 aa in length, transposable elements, etc).
+[06/14/21 18:50:57]: diamond blastp --sensitive --query ../annotate/Aspergillus_melleus_CBS_546.65/predict_misc/evm.round1.proteins.fa --threads 24 --out ../annotate/Aspergillus_melleus_CBS_546.65/predict_misc/repeats.xml --db /bigdata/stajichlab/shared/lib/funannotate_db/repeats.dmnd --evalue 1e-10 --max-target-seqs 1 --outfmt 5
+[06/14/21 18:51:07]: bedtools intersect -sorted -f 0.9 -a /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/evm.round1.gff3.sorted.gff -b /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/repeatmasker.bed.sorted.bed
+[06/14/21 18:51:08]: Found 133 gene models to remove: 6 too short; 0 span gaps; 127 transposable elements
+[06/14/21 18:51:08]: 12,841 gene models remaining
+[06/14/21 18:51:08]: Predicting tRNAs
+[06/14/21 18:51:08]: tRNAscan-SE -o ../annotate/Aspergillus_melleus_CBS_546.65/predict_misc/tRNAscan.out --thread 24 /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/genome.softmasked.fa
+[06/14/21 18:52:39]: Unknown option: thread
+cat: 24: No such file or directory
+
+tRNAscan-SE v.1.3.1 (January 2012) - scan sequences for transfer RNAs
+
+  Please cite: 
+	Lowe, T.M. & Eddy, S.R. (1997) "tRNAscan-SE: A program for
+	improved detection of transfer RNA genes in genomic sequence"
+	Nucl. Acids Res. 25: 955-964.
+
+  This program uses a modified, optimized version of tRNAscan v1.3
+  (Fichant & Burks, J. Mol. Biol. 1991, 220: 659-671),
+  a new implementation of a multistep weight matrix algorithm
+  for identification of eukaryotic tRNA promoter regions
+  (Pavesi et al., Nucl. Acids Res. 1994, 22: 1247-1256),
+  as well as the RNA covariance analysis package Cove v.2.4.2
+  (Eddy & Durbin, Nucl. Acids Res. 1994, 22: 2079-2088).
+
+------------------------------------------------------------
+Sequence file(s) to search:  24, /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/genome.softmasked.fa
+Search Mode:                 Eukaryotic
+Results written to:          ../annotate/Aspergillus_melleus_CBS_546.65/predict_misc/tRNAscan.out
+Output format:               Tabular
+Searching with:              tRNAscan + EufindtRNA -> Cove
+Covariance model:            TRNA2-euk.cm
+tRNAscan parameters:         Strict
+EufindtRNA parameters:       Relaxed (Int Cutoff= -32.1)
+Search log saved in:         
+------------------------------------------------------------
+
+
+[06/14/21 18:52:40]: bedtools intersect -sorted -v -a /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/trnascan.gff3.sorted.gff3 -b /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/evm.cleaned.gff3.sorted.gff3 /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/assembly-gaps.bed.sorted.gff3
+[06/14/21 18:52:40]: 213 tRNAscan models are valid (non-overlapping)
+[06/14/21 18:52:40]: Generating GenBank tbl annotation file
+[06/14/21 18:53:35]: Collecting final annotation files for 13,054 total gene models
+[06/14/21 18:53:35]: Converting to final Genbank format
+[06/14/21 18:53:35]: /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/bin/python3.8 /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/lib/python3.8/site-packages/funannotate/aux_scripts/tbl2asn_parallel.py -i ../annotate/Aspergillus_melleus_CBS_546.65/predict_misc/tbl2asn/genome.tbl -f /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/genome.softmasked.fa -o ../annotate/Aspergillus_melleus_CBS_546.65/predict_misc/tbl2asn --sbt /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/lib/python3.8/site-packages/funannotate/config/test.sbt -d ../annotate/Aspergillus_melleus_CBS_546.65/predict_results/Aspergillus_melleus_CBS_546.65.discrepency.report.txt -s Aspergillus melleus -t -l paired-ends -v 1 -c 24 --strain CBS 546.65
+[06/14/21 18:55:01]: Funannotate predict is finished, output files are in the ../annotate/Aspergillus_melleus_CBS_546.65/predict_results folder
+[06/14/21 18:55:01]: Your next step to capture UTRs and update annotation using PASA:
+
+  funannotate update -i ../annotate/Aspergillus_melleus_CBS_546.65 --cpus 24
+
+[06/14/21 18:55:01]: Training parameters file saved: ../annotate/Aspergillus_melleus_CBS_546.65/predict_results/aspergillus_melleus_cbs_546.65.parameters.json
+[06/14/21 18:55:01]: Add species parameters to database:
+
+  funannotate species -s aspergillus_melleus_cbs_546.65 -a ../annotate/Aspergillus_melleus_CBS_546.65/predict_results/aspergillus_melleus_cbs_546.65.parameters.json
+

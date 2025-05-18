@@ -1,0 +1,754 @@
+[06/14/21 18:15:36]: /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/lib/python3.8/site-packages/funannotate/aux_scripts/funannotate-runEVM.py -w /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/weights.evm.txt -c 24 -g /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/gene_predictions.gff3 -d /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM -f /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/genome.softmasked.fa -l ../annotate/Aspergillus_melleus_CBS_546.65/logfiles/funannotate-EVM.log -m 10 -i 1500 -o /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/evm.round1.gff3 --EVM_HOME /opt/linux/centos/7.x/x86_64/pkgs/EVM/1.1.1-live -p /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/protein_alignments.gff3 -t /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/transcript_alignments.gff3
+
+[06/14/21 18:15:36]: EVM: partitioning input to ~ 35 genes per partition using min 1500 bp interval
+[06/14/21 18:15:43]: 11 total contigs; skipping 1 contigs with no genes
+[06/14/21 18:15:43]: Merged 64455 genes into 12397 supergenes with bedtools
+[06/14/21 18:15:43]: contig1_1-121661 --> 121660 bp
+[06/14/21 18:15:43]: contig1_118875-157977 --> 39102 bp
+[06/14/21 18:15:43]: contig1_155799-296684 --> 140885 bp
+[06/14/21 18:15:43]: contig1_294688-391978 --> 97290 bp
+[06/14/21 18:15:43]: contig1_390099-443754 --> 53655 bp
+[06/14/21 18:15:43]: contig1_441889-542428 --> 100539 bp
+[06/14/21 18:15:43]: contig1_540849-640334 --> 99485 bp
+[06/14/21 18:15:43]: contig1_637948-724709 --> 86761 bp
+[06/14/21 18:15:43]: contig1_721200-832075 --> 110875 bp
+[06/14/21 18:15:43]: contig1_828620-903553 --> 74933 bp
+[06/14/21 18:15:43]: contig1_901740-1058113 --> 156373 bp
+[06/14/21 18:15:43]: contig1_1056392-1128985 --> 72593 bp
+[06/14/21 18:15:43]: contig1_1127383-1229335 --> 101952 bp
+[06/14/21 18:15:43]: contig1_1226854-1368855 --> 142001 bp
+[06/14/21 18:15:43]: contig1_1362842-1470170 --> 107328 bp
+[06/14/21 18:15:43]: contig1_1468284-1565271 --> 96987 bp
+[06/14/21 18:15:43]: contig1_1563569-1679927 --> 116358 bp
+[06/14/21 18:15:43]: contig1_1675813-1770249 --> 94436 bp
+[06/14/21 18:15:43]: contig1_1767684-2044606 --> 276922 bp
+[06/14/21 18:15:43]: contig1_2035105-2088772 --> 53667 bp
+[06/14/21 18:15:43]: contig1_2083847-2258605 --> 174758 bp
+[06/14/21 18:15:43]: contig1_2257003-2375984 --> 118981 bp
+[06/14/21 18:15:43]: contig1_2374428-2520259 --> 145831 bp
+[06/14/21 18:15:43]: contig1_2511200-2622308 --> 111108 bp
+[06/14/21 18:15:43]: contig1_2618789-2740947 --> 122158 bp
+[06/14/21 18:15:43]: contig1_2734541-2824277 --> 89736 bp
+[06/14/21 18:15:43]: contig1_2821986-2959151 --> 137165 bp
+[06/14/21 18:15:43]: contig1_2954361-3080819 --> 126458 bp
+[06/14/21 18:15:43]: contig1_3077752-3179717 --> 101965 bp
+[06/14/21 18:15:43]: contig1_3176869-3254381 --> 77512 bp
+[06/14/21 18:15:43]: contig1_3251433-3359021 --> 107588 bp
+[06/14/21 18:15:43]: contig1_3357521-3457068 --> 99547 bp
+[06/14/21 18:15:43]: contig1_3455317-3580690 --> 125373 bp
+[06/14/21 18:15:43]: contig1_3578628-3678230 --> 99602 bp
+[06/14/21 18:15:43]: contig1_3676405-3765336 --> 88931 bp
+[06/14/21 18:15:43]: contig1_3761141-3886118 --> 124977 bp
+[06/14/21 18:15:43]: contig1_3884493-3980676 --> 96183 bp
+[06/14/21 18:15:43]: contig1_3978859-4093358 --> 114499 bp
+[06/14/21 18:15:43]: contig1_4090874-4200865 --> 109991 bp
+[06/14/21 18:15:43]: contig1_4196858-4287583 --> 90725 bp
+[06/14/21 18:15:43]: contig1_4285440-4380995 --> 95555 bp
+[06/14/21 18:15:43]: contig1_4378465-4488233 --> 109768 bp
+[06/14/21 18:15:43]: contig1_4484948-4610826 --> 125878 bp
+[06/14/21 18:15:43]: contig1_4606845-4716919 --> 110074 bp
+[06/14/21 18:15:43]: contig1_4711599-4829485 --> 117886 bp
+[06/14/21 18:15:43]: contig1_4827149-4910281 --> 83132 bp
+[06/14/21 18:15:43]: contig1_4907902-4997108 --> 89206 bp
+[06/14/21 18:15:43]: contig1_4994891-5090757 --> 95866 bp
+[06/14/21 18:15:43]: contig1_5088549-5243932 --> 155383 bp
+[06/14/21 18:15:43]: contig1_5242278-5409946 --> 167668 bp
+[06/14/21 18:15:43]: contig1_5402646-5511865 --> 109219 bp
+[06/14/21 18:15:43]: contig1_5508489-5615599 --> 107110 bp
+[06/14/21 18:15:43]: contig1_5613690-5720083 --> 106393 bp
+[06/14/21 18:15:43]: contig1_5717122-5857737 --> 140615 bp
+[06/14/21 18:15:43]: contig1_5856040-5954000 --> 97960 bp
+[06/14/21 18:15:43]: contig1_5952375-6037869 --> 85494 bp
+[06/14/21 18:15:43]: contig1_6035200-6115850 --> 80650 bp
+[06/14/21 18:15:43]: contig1_6113835-6203226 --> 89391 bp
+[06/14/21 18:15:43]: contig1_6200463-6290076 --> 89613 bp
+[06/14/21 18:15:43]: contig1_6274939-6406315 --> 131376 bp
+[06/14/21 18:15:43]: contig1_6404642-6505798 --> 101156 bp
+[06/14/21 18:15:43]: contig1_6503892-6646535 --> 142643 bp
+[06/14/21 18:15:43]: contig1_6640883-6729475 --> 88592 bp
+[06/14/21 18:15:43]: contig1_6727741-6825451 --> 97710 bp
+[06/14/21 18:15:43]: contig1_6822027-6914156 --> 92129 bp
+[06/14/21 18:15:43]: contig1_6912528-7010123 --> 97595 bp
+[06/14/21 18:15:43]: contig1_7008473-7108881 --> 100408 bp
+[06/14/21 18:15:43]: contig1_7106213-7198525 --> 92312 bp
+[06/14/21 18:15:43]: contig1_7188358-7329616 --> 141258 bp
+[06/14/21 18:15:43]: contig1_7327300-7429234 --> 101934 bp
+[06/14/21 18:15:43]: contig1_7426525-7537414 --> 110889 bp
+[06/14/21 18:15:43]: contig1_7535824-7610794 --> 74970 bp
+[06/14/21 18:15:43]: contig1_7608643-7721057 --> 112414 bp
+[06/14/21 18:15:43]: contig1_7719558-7798376 --> 78818 bp
+[06/14/21 18:15:44]: contig1_7795585-7860730 --> 65145 bp
+[06/14/21 18:15:44]: contig2_1-95538 --> 95537 bp
+[06/14/21 18:15:44]: contig2_93948-176357 --> 82409 bp
+[06/14/21 18:15:44]: contig2_174413-281386 --> 106973 bp
+[06/14/21 18:15:44]: contig2_278703-371918 --> 93215 bp
+[06/14/21 18:15:44]: contig2_369753-501389 --> 131636 bp
+[06/14/21 18:15:44]: contig2_499282-564733 --> 65451 bp
+[06/14/21 18:15:44]: contig2_563065-696494 --> 133429 bp
+[06/14/21 18:15:44]: contig2_692990-829830 --> 136840 bp
+[06/14/21 18:15:44]: contig2_828023-924359 --> 96336 bp
+[06/14/21 18:15:44]: contig2_917743-1029405 --> 111662 bp
+[06/14/21 18:15:44]: contig2_1026484-1118188 --> 91704 bp
+[06/14/21 18:15:44]: contig2_1113679-1263109 --> 149430 bp
+[06/14/21 18:15:44]: contig2_1255855-1351925 --> 96070 bp
+[06/14/21 18:15:44]: contig2_1349176-1545153 --> 195977 bp
+[06/14/21 18:15:44]: contig2_1528810-1628614 --> 99804 bp
+[06/14/21 18:15:44]: contig2_1626687-1878114 --> 251427 bp
+[06/14/21 18:15:44]: contig2_1842675-2000158 --> 157483 bp
+[06/14/21 18:15:44]: contig2_1997994-2024042 --> 26048 bp
+[06/14/21 18:15:44]: contig2_2021059-2174111 --> 153052 bp
+[06/14/21 18:15:44]: contig2_2170496-2254386 --> 83890 bp
+[06/14/21 18:15:44]: contig2_2252558-2381604 --> 129046 bp
+[06/14/21 18:15:44]: contig2_2379631-2485024 --> 105393 bp
+[06/14/21 18:15:44]: contig2_2482805-2590280 --> 107475 bp
+[06/14/21 18:15:44]: contig2_2588062-2707758 --> 119696 bp
+[06/14/21 18:15:44]: contig2_2702834-2808086 --> 105252 bp
+[06/14/21 18:15:44]: contig2_2806297-2918737 --> 112440 bp
+[06/14/21 18:15:44]: contig2_2910402-2966501 --> 56099 bp
+[06/14/21 18:15:44]: contig2_2963905-3125031 --> 161126 bp
+[06/14/21 18:15:44]: contig2_3122616-3220155 --> 97539 bp
+[06/14/21 18:15:44]: contig2_3218222-3310461 --> 92239 bp
+[06/14/21 18:15:44]: contig2_3306607-3430109 --> 123502 bp
+[06/14/21 18:15:44]: contig2_3428482-3531757 --> 103275 bp
+[06/14/21 18:15:44]: contig2_3528278-3658190 --> 129912 bp
+[06/14/21 18:15:44]: contig2_3654278-3836481 --> 182203 bp
+[06/14/21 18:15:44]: contig2_3834562-3895395 --> 60833 bp
+[06/14/21 18:15:44]: contig2_3892258-3995031 --> 102773 bp
+[06/14/21 18:15:44]: contig2_3990523-4119032 --> 128509 bp
+[06/14/21 18:15:44]: contig2_4116955-4231235 --> 114280 bp
+[06/14/21 18:15:44]: contig2_4229486-4299116 --> 69630 bp
+[06/14/21 18:15:44]: contig2_4295772-4407179 --> 111407 bp
+[06/14/21 18:15:44]: contig2_4405430-4512079 --> 106649 bp
+[06/14/21 18:15:44]: contig2_4509840-4593791 --> 83951 bp
+[06/14/21 18:15:44]: contig2_4592148-4687698 --> 95550 bp
+[06/14/21 18:15:44]: contig2_4685642-4801610 --> 115968 bp
+[06/14/21 18:15:44]: contig2_4800025-4880875 --> 80850 bp
+[06/14/21 18:15:44]: contig2_4879305-5003959 --> 124654 bp
+[06/14/21 18:15:44]: contig2_5002198-5091673 --> 89475 bp
+[06/14/21 18:15:44]: contig2_5089589-5195334 --> 105745 bp
+[06/14/21 18:15:44]: contig2_5192337-5290938 --> 98601 bp
+[06/14/21 18:15:44]: contig2_5289205-5407243 --> 118038 bp
+[06/14/21 18:15:44]: contig2_5402059-5555802 --> 153743 bp
+[06/14/21 18:15:44]: contig2_5552974-5652563 --> 99589 bp
+[06/14/21 18:15:44]: contig2_5648122-5741250 --> 93128 bp
+[06/14/21 18:15:44]: contig2_5738415-5840868 --> 102453 bp
+[06/14/21 18:15:44]: contig2_5838277-5939987 --> 101710 bp
+[06/14/21 18:15:44]: contig2_5938409-6044366 --> 105957 bp
+[06/14/21 18:15:44]: contig2_6041756-6150951 --> 109195 bp
+[06/14/21 18:15:44]: contig2_6149137-6216530 --> 67393 bp
+[06/14/21 18:15:44]: contig3_1-38578 --> 38577 bp
+[06/14/21 18:15:44]: contig3_33468-172347 --> 138879 bp
+[06/14/21 18:15:44]: contig3_170543-290580 --> 120037 bp
+[06/14/21 18:15:44]: contig3_288554-396113 --> 107559 bp
+[06/14/21 18:15:44]: contig3_394549-525240 --> 130691 bp
+[06/14/21 18:15:44]: contig3_522915-603597 --> 80682 bp
+[06/14/21 18:15:44]: contig3_601725-692625 --> 90900 bp
+[06/14/21 18:15:44]: contig3_690196-824009 --> 133813 bp
+[06/14/21 18:15:44]: contig3_814827-918569 --> 103742 bp
+[06/14/21 18:15:44]: contig3_917051-1053876 --> 136825 bp
+[06/14/21 18:15:44]: contig3_1050106-1131139 --> 81033 bp
+[06/14/21 18:15:44]: contig3_1128761-1267584 --> 138823 bp
+[06/14/21 18:15:44]: contig3_1265364-1337962 --> 72598 bp
+[06/14/21 18:15:44]: contig3_1334424-1482995 --> 148571 bp
+[06/14/21 18:15:44]: contig3_1481230-1606965 --> 125735 bp
+[06/14/21 18:15:44]: contig3_1604106-1675423 --> 71317 bp
+[06/14/21 18:15:44]: contig3_1671778-1781037 --> 109259 bp
+[06/14/21 18:15:44]: contig3_1779503-1879434 --> 99931 bp
+[06/14/21 18:15:44]: contig3_1877887-1977066 --> 99179 bp
+[06/14/21 18:15:44]: contig3_1975401-2030705 --> 55304 bp
+[06/14/21 18:15:44]: contig3_2025811-2194653 --> 168842 bp
+[06/14/21 18:15:44]: contig3_2193100-2281955 --> 88855 bp
+[06/14/21 18:15:44]: contig3_2279207-2397670 --> 118463 bp
+[06/14/21 18:15:44]: contig3_2393069-2496631 --> 103562 bp
+[06/14/21 18:15:44]: contig3_2494876-2634302 --> 139426 bp
+[06/14/21 18:15:44]: contig3_2632698-2715252 --> 82554 bp
+[06/14/21 18:15:44]: contig3_2713686-2818445 --> 104759 bp
+[06/14/21 18:15:44]: contig3_2816911-2930018 --> 113107 bp
+[06/14/21 18:15:44]: contig3_2926691-3037226 --> 110535 bp
+[06/14/21 18:15:44]: contig3_3035389-3127988 --> 92599 bp
+[06/14/21 18:15:44]: contig3_3125200-3240151 --> 114951 bp
+[06/14/21 18:15:44]: contig3_3238589-3339063 --> 100474 bp
+[06/14/21 18:15:44]: contig3_3337493-3447365 --> 109872 bp
+[06/14/21 18:15:44]: contig3_3444855-3646719 --> 201864 bp
+[06/14/21 18:15:44]: contig3_3645003-3733915 --> 88912 bp
+[06/14/21 18:15:44]: contig3_3730334-3796855 --> 66521 bp
+[06/14/21 18:15:44]: contig3_3794835-3922040 --> 127205 bp
+[06/14/21 18:15:44]: contig3_3919867-4019839 --> 99972 bp
+[06/14/21 18:15:44]: contig3_4015592-4122849 --> 107257 bp
+[06/14/21 18:15:44]: contig3_4117511-4238933 --> 121422 bp
+[06/14/21 18:15:44]: contig3_4236486-4532156 --> 295670 bp
+[06/14/21 18:15:44]: contig3_4528319-4641588 --> 113269 bp
+[06/14/21 18:15:44]: contig3_4638993-4750772 --> 111779 bp
+[06/14/21 18:15:44]: contig3_4746777-4844810 --> 98033 bp
+[06/14/21 18:15:44]: contig3_4842241-4977709 --> 135468 bp
+[06/14/21 18:15:44]: contig3_4974497-5085562 --> 111065 bp
+[06/14/21 18:15:44]: contig3_5082551-5208853 --> 126302 bp
+[06/14/21 18:15:44]: contig3_5206384-5392680 --> 186296 bp
+[06/14/21 18:15:44]: contig3_5390964-5491327 --> 100363 bp
+[06/14/21 18:15:44]: contig3_5488524-5594283 --> 105759 bp
+[06/14/21 18:15:44]: contig4_1-132262 --> 132261 bp
+[06/14/21 18:15:44]: contig4_127304-225037 --> 97733 bp
+[06/14/21 18:15:44]: contig4_219403-316738 --> 97335 bp
+[06/14/21 18:15:44]: contig4_313524-423911 --> 110387 bp
+[06/14/21 18:15:44]: contig4_421591-517456 --> 95865 bp
+[06/14/21 18:15:44]: contig4_515190-609581 --> 94391 bp
+[06/14/21 18:15:44]: contig4_608029-731795 --> 123766 bp
+[06/14/21 18:15:44]: contig4_726409-847963 --> 121554 bp
+[06/14/21 18:15:44]: contig4_846178-946855 --> 100677 bp
+[06/14/21 18:15:44]: contig4_944720-1046019 --> 101299 bp
+[06/14/21 18:15:44]: contig4_1041968-1167993 --> 126025 bp
+[06/14/21 18:15:44]: contig4_1165426-1277374 --> 111948 bp
+[06/14/21 18:15:44]: contig4_1274477-1370622 --> 96145 bp
+[06/14/21 18:15:44]: contig4_1366538-1531583 --> 165045 bp
+[06/14/21 18:15:44]: contig4_1526974-1629715 --> 102741 bp
+[06/14/21 18:15:44]: contig4_1626007-1739769 --> 113762 bp
+[06/14/21 18:15:44]: contig4_1737415-1805532 --> 68117 bp
+[06/14/21 18:15:44]: contig4_1803013-1917205 --> 114192 bp
+[06/14/21 18:15:44]: contig4_1915461-2014861 --> 99400 bp
+[06/14/21 18:15:44]: contig4_2012771-2150849 --> 138078 bp
+[06/14/21 18:15:44]: contig4_2148719-2289343 --> 140624 bp
+[06/14/21 18:15:44]: contig4_2282705-2401828 --> 119123 bp
+[06/14/21 18:15:44]: contig4_2397406-2484572 --> 87166 bp
+[06/14/21 18:15:44]: contig4_2483013-2625441 --> 142428 bp
+[06/14/21 18:15:44]: contig4_2619855-2685960 --> 66105 bp
+[06/14/21 18:15:44]: contig4_2684119-2760704 --> 76585 bp
+[06/14/21 18:15:44]: contig4_2758276-2868956 --> 110680 bp
+[06/14/21 18:15:44]: contig4_2866535-2991231 --> 124696 bp
+[06/14/21 18:15:44]: contig4_2986135-3111352 --> 125217 bp
+[06/14/21 18:15:44]: contig4_3107382-3210597 --> 103215 bp
+[06/14/21 18:15:44]: contig4_3208598-3296166 --> 87568 bp
+[06/14/21 18:15:44]: contig4_3292080-3407202 --> 115122 bp
+[06/14/21 18:15:44]: contig4_3399780-3444558 --> 44778 bp
+[06/14/21 18:15:44]: contig4_3441460-3740505 --> 299045 bp
+[06/14/21 18:15:44]: contig4_3738950-3821390 --> 82440 bp
+[06/14/21 18:15:44]: contig4_3819133-3932305 --> 113172 bp
+[06/14/21 18:15:44]: contig4_3925864-4003587 --> 77723 bp
+[06/14/21 18:15:44]: contig4_3999689-4130847 --> 131158 bp
+[06/14/21 18:15:44]: contig4_4128422-4227058 --> 98636 bp
+[06/14/21 18:15:44]: contig4_4221277-4331129 --> 109852 bp
+[06/14/21 18:15:44]: contig4_4329228-4426385 --> 97157 bp
+[06/14/21 18:15:44]: contig4_4423499-4550480 --> 126981 bp
+[06/14/21 18:15:44]: contig4_4548981-4637244 --> 88263 bp
+[06/14/21 18:15:44]: contig4_4634774-4759008 --> 124234 bp
+[06/14/21 18:15:44]: contig4_4754621-4855711 --> 101090 bp
+[06/14/21 18:15:44]: contig4_4854128-4952261 --> 98133 bp
+[06/14/21 18:15:44]: contig4_4950277-5110483 --> 160206 bp
+[06/14/21 18:15:44]: contig5_1-89550 --> 89549 bp
+[06/14/21 18:15:44]: contig5_87053-128467 --> 41414 bp
+[06/14/21 18:15:44]: contig5_125734-301552 --> 175818 bp
+[06/14/21 18:15:44]: contig5_299846-418437 --> 118591 bp
+[06/14/21 18:15:44]: contig5_416664-546410 --> 129746 bp
+[06/14/21 18:15:44]: contig5_543862-631526 --> 87664 bp
+[06/14/21 18:15:44]: contig5_628734-756195 --> 127461 bp
+[06/14/21 18:15:44]: contig5_753145-861907 --> 108762 bp
+[06/14/21 18:15:44]: contig5_858760-975750 --> 116990 bp
+[06/14/21 18:15:44]: contig5_970750-1051256 --> 80506 bp
+[06/14/21 18:15:44]: contig5_1044767-1367508 --> 322741 bp
+[06/14/21 18:15:44]: contig5_1365729-1457330 --> 91601 bp
+[06/14/21 18:15:44]: contig5_1455770-1561747 --> 105977 bp
+[06/14/21 18:15:44]: contig5_1554386-1682713 --> 128327 bp
+[06/14/21 18:15:44]: contig5_1679736-1769556 --> 89820 bp
+[06/14/21 18:15:44]: contig5_1765849-1885610 --> 119761 bp
+[06/14/21 18:15:44]: contig5_1882410-1999493 --> 117083 bp
+[06/14/21 18:15:44]: contig5_1997754-2086572 --> 88818 bp
+[06/14/21 18:15:44]: contig5_2083276-2179919 --> 96643 bp
+[06/14/21 18:15:44]: contig5_2177192-2262874 --> 85682 bp
+[06/14/21 18:15:44]: contig5_2258854-2352433 --> 93579 bp
+[06/14/21 18:15:44]: contig5_2346945-2507836 --> 160891 bp
+[06/14/21 18:15:44]: contig5_2505984-2649074 --> 143090 bp
+[06/14/21 18:15:44]: contig5_2646038-2802324 --> 156286 bp
+[06/14/21 18:15:44]: contig5_2800069-2936463 --> 136394 bp
+[06/14/21 18:15:44]: contig5_2932087-3084304 --> 152217 bp
+[06/14/21 18:15:44]: contig5_3082719-3205394 --> 122675 bp
+[06/14/21 18:15:44]: contig5_3203302-3327621 --> 124319 bp
+[06/14/21 18:15:44]: contig5_3325191-3420686 --> 95495 bp
+[06/14/21 18:15:44]: contig5_3417915-3505652 --> 87737 bp
+[06/14/21 18:15:44]: contig5_3503290-3607877 --> 104587 bp
+[06/14/21 18:15:44]: contig5_3605595-3710777 --> 105182 bp
+[06/14/21 18:15:44]: contig5_3709230-3777053 --> 67823 bp
+[06/14/21 18:15:44]: contig5_3773071-3913189 --> 140118 bp
+[06/14/21 18:15:44]: contig5_3911429-3985673 --> 74244 bp
+[06/14/21 18:15:44]: contig5_3977799-4067220 --> 89421 bp
+[06/14/21 18:15:44]: contig6_1-144617 --> 144616 bp
+[06/14/21 18:15:44]: contig6_142962-194323 --> 51361 bp
+[06/14/21 18:15:44]: contig6_188954-318827 --> 129873 bp
+[06/14/21 18:15:44]: contig6_314594-444063 --> 129469 bp
+[06/14/21 18:15:44]: contig6_437513-487391 --> 49878 bp
+[06/14/21 18:15:44]: contig6_484100-687541 --> 203441 bp
+[06/14/21 18:15:44]: contig6_685887-777151 --> 91264 bp
+[06/14/21 18:15:44]: contig6_775570-854166 --> 78596 bp
+[06/14/21 18:15:44]: contig6_845828-960659 --> 114831 bp
+[06/14/21 18:15:44]: contig6_958664-1040715 --> 82051 bp
+[06/14/21 18:15:44]: contig6_1039116-1287041 --> 247925 bp
+[06/14/21 18:15:44]: contig6_1242293-1484500 --> 242207 bp
+[06/14/21 18:15:44]: contig6_1481931-1560064 --> 78133 bp
+[06/14/21 18:15:44]: contig6_1555850-1678754 --> 122904 bp
+[06/14/21 18:15:44]: contig6_1668102-1797779 --> 129677 bp
+[06/14/21 18:15:44]: contig6_1794639-1884416 --> 89777 bp
+[06/14/21 18:15:44]: contig6_1879236-1981959 --> 102723 bp
+[06/14/21 18:15:44]: contig6_1979567-2102190 --> 122623 bp
+[06/14/21 18:15:44]: contig6_2097887-2186464 --> 88577 bp
+[06/14/21 18:15:44]: contig6_2184819-2283726 --> 98907 bp
+[06/14/21 18:15:44]: contig6_2281067-2343359 --> 62292 bp
+[06/14/21 18:15:44]: contig6_2341414-2480401 --> 138987 bp
+[06/14/21 18:15:44]: contig6_2478716-2561185 --> 82469 bp
+[06/14/21 18:15:44]: contig6_2559125-2679069 --> 119944 bp
+[06/14/21 18:15:44]: contig6_2676740-2758531 --> 81791 bp
+[06/14/21 18:15:44]: contig6_2756760-2871153 --> 114393 bp
+[06/14/21 18:15:44]: contig6_2869442-3007172 --> 137730 bp
+[06/14/21 18:15:44]: contig6_3005155-3096072 --> 90917 bp
+[06/14/21 18:15:44]: contig6_3093896-3178831 --> 84935 bp
+[06/14/21 18:15:44]: contig6_3177305-3258338 --> 81033 bp
+[06/14/21 18:15:44]: contig6_3256345-3363047 --> 106702 bp
+[06/14/21 18:15:45]: contig6_3360808-3408959 --> 48151 bp
+[06/14/21 18:15:45]: contig7_1-56930 --> 56929 bp
+[06/14/21 18:15:45]: contig7_54479-148141 --> 93662 bp
+[06/14/21 18:15:45]: contig7_145062-258588 --> 113526 bp
+[06/14/21 18:15:45]: contig7_256887-402477 --> 145590 bp
+[06/14/21 18:15:45]: contig7_395874-466808 --> 70934 bp
+[06/14/21 18:15:45]: contig7_464936-581415 --> 116479 bp
+[06/14/21 18:15:45]: contig7_578927-666320 --> 87393 bp
+[06/14/21 18:15:45]: contig7_663852-975090 --> 311238 bp
+[06/14/21 18:15:45]: contig7_919596-1051837 --> 132241 bp
+[06/14/21 18:15:45]: contig7_1048617-1153129 --> 104512 bp
+[06/14/21 18:15:45]: contig7_1151485-1246642 --> 95157 bp
+[06/14/21 18:15:45]: contig7_1240917-1357604 --> 116687 bp
+[06/14/21 18:15:45]: contig7_1353016-1455960 --> 102944 bp
+[06/14/21 18:15:45]: contig7_1454260-1584028 --> 129768 bp
+[06/14/21 18:15:45]: contig7_1581344-1664607 --> 83263 bp
+[06/14/21 18:15:45]: contig7_1662933-1745177 --> 82244 bp
+[06/14/21 18:15:45]: contig7_1742994-1865876 --> 122882 bp
+[06/14/21 18:15:45]: contig7_1863922-1948370 --> 84448 bp
+[06/14/21 18:15:45]: contig7_1946729-2057970 --> 111241 bp
+[06/14/21 18:15:45]: contig7_2050033-2159481 --> 109448 bp
+[06/14/21 18:15:45]: contig7_2156653-2221906 --> 65253 bp
+[06/14/21 18:15:45]: contig7_2220340-2328101 --> 107761 bp
+[06/14/21 18:15:45]: contig7_2323498-2440137 --> 116639 bp
+[06/14/21 18:15:45]: contig7_2437226-2494095 --> 56869 bp
+[06/14/21 18:15:45]: contig7_2491751-2666264 --> 174513 bp
+[06/14/21 18:15:45]: contig7_2664533-2776845 --> 112312 bp
+[06/14/21 18:15:45]: contig7_2775263-2904383 --> 129120 bp
+[06/14/21 18:15:45]: contig7_2902599-2994001 --> 91402 bp
+[06/14/21 18:15:45]: contig7_2992075-3064841 --> 72766 bp
+[06/14/21 18:15:45]: contig7_3060938-3143872 --> 82934 bp
+[06/14/21 18:15:45]: contig7_3141503-3234110 --> 92607 bp
+[06/14/21 18:15:45]: contig7_3232105-3380224 --> 148119 bp
+[06/14/21 18:15:45]: contig8_1-127805 --> 127804 bp
+[06/14/21 18:15:45]: contig8_122445-217836 --> 95391 bp
+[06/14/21 18:15:45]: contig8_216141-350871 --> 134730 bp
+[06/14/21 18:15:45]: contig8_349097-438248 --> 89151 bp
+[06/14/21 18:15:45]: contig8_436656-551003 --> 114347 bp
+[06/14/21 18:15:45]: contig8_546163-651221 --> 105058 bp
+[06/14/21 18:15:45]: contig8_647605-758869 --> 111264 bp
+[06/14/21 18:15:45]: contig8_750192-1038271 --> 288079 bp
+[06/14/21 18:15:45]: contig8_1034435-1139296 --> 104861 bp
+[06/14/21 18:15:45]: contig8_1135472-1253821 --> 118349 bp
+[06/14/21 18:15:45]: contig8_1250748-1353442 --> 102694 bp
+[06/14/21 18:15:45]: contig8_1348750-1455817 --> 107067 bp
+[06/14/21 18:15:45]: contig8_1450012-1558958 --> 108946 bp
+[06/14/21 18:15:45]: contig8_1556396-1663486 --> 107090 bp
+[06/14/21 18:15:45]: contig8_1659026-1766485 --> 107459 bp
+[06/14/21 18:15:45]: contig8_1764029-1879238 --> 115209 bp
+[06/14/21 18:15:45]: contig9_1-100523 --> 100522 bp
+[06/14/21 18:15:45]: contig9_98443-195501 --> 97058 bp
+[06/14/21 18:15:45]: contig9_192889-290500 --> 97611 bp
+[06/14/21 18:15:45]: contig9_288314-352978 --> 64664 bp
+[06/14/21 18:15:45]: contig9_351329-467788 --> 116459 bp
+[06/14/21 18:15:45]: contig9_465724-612129 --> 146405 bp
+[06/14/21 18:15:45]: contig9_605231-772275 --> 167044 bp
+[06/14/21 18:15:45]: contig9_770406-827956 --> 57550 bp
+[06/14/21 18:15:45]: contig9_824868-979209 --> 154341 bp
+[06/14/21 18:15:45]: contig9_976359-1087741 --> 111382 bp
+[06/14/21 18:15:45]: contig9_1086131-1221229 --> 135098 bp
+[06/14/21 18:15:45]: contig10 --> 77021 bp
+[06/14/21 18:16:54]: Finished partitioning, generating command list
+[06/14/21 18:50:26]: perl /opt/linux/centos/7.x/x86_64/pkgs/EVM/1.1.1-live/EvmUtils/recombine_EVM_partial_outputs.pl --partitions partitions_list.out --output_file_name evm.out
+[06/14/21 18:50:39]: Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_1742994-1865876/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_3232105-3380224/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_3141503-3234110/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_2902599-2994001/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_2992075-3064841/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_1454260-1584028/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_2050033-2159481/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_3060938-3143872/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_1048617-1153129/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_256887-402477/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_1581344-1664607/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_2775263-2904383/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_2437226-2494095/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_2491751-2666264/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_54479-148141/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_2323498-2440137/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_1863922-1948370/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_1946729-2057970/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_2664533-2776845/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_1151485-1246642/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_1662933-1745177/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_1240917-1357604/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_145062-258588/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_1-56930/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_2220340-2328101/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_1353016-1455960/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_663852-975090/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_2156653-2221906/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_919596-1051837/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_578927-666320/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_464936-581415/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/contig7_395874-466808/evm.out
+	writing output /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7/evm.out
+
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_1255855-1351925/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_5089589-5195334/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_828023-924359/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_2806297-2918737/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_1349176-1545153/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_174413-281386/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_4229486-4299116/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_2963905-3125031/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_3428482-3531757/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_2021059-2174111/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_1842675-2000158/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_6149137-6216530/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_3654278-3836481/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_4592148-4687698/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_2702834-2808086/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_4509840-4593791/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_1997994-2024042/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_2482805-2590280/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_1026484-1118188/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_2588062-2707758/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_1-95538/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_3892258-3995031/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_1113679-1263109/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_4295772-4407179/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_3306607-3430109/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_4685642-4801610/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_5192337-5290938/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_2252558-2381604/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_3990523-4119032/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_5738415-5840868/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_2170496-2254386/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_5002198-5091673/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_3834562-3895395/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_4800025-4880875/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_5938409-6044366/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_6041756-6150951/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_4879305-5003959/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_278703-371918/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_2910402-2966501/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_3122616-3220155/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_93948-176357/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_917743-1029405/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_692990-829830/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_4116955-4231235/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_5552974-5652563/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_3218222-3310461/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_563065-696494/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_1528810-1628614/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_5402059-5555802/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_2379631-2485024/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_3528278-3658190/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_499282-564733/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_4405430-4512079/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_5289205-5407243/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_5648122-5741250/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_369753-501389/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_5838277-5939987/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/contig2_1626687-1878114/evm.out
+	writing output /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2/evm.out
+
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_2184819-2283726/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_2756760-2871153/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_2676740-2758531/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_2869442-3007172/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_188954-318827/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_1481931-1560064/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_1794639-1884416/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_3093896-3178831/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_1-144617/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_1668102-1797779/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_685887-777151/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_3177305-3258338/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_958664-1040715/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_775570-854166/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_2281067-2343359/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_2097887-2186464/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_3005155-3096072/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_2559125-2679069/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_314594-444063/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_3360808-3408959/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_845828-960659/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_2478716-2561185/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_1242293-1484500/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_1979567-2102190/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_1039116-1287041/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_1879236-1981959/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_484100-687541/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_3256345-3363047/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_142962-194323/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_437513-487391/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_2341414-2480401/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/contig6_1555850-1678754/evm.out
+	writing output /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6/evm.out
+
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig8/contig8_750192-1038271/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig8/contig8_1034435-1139296/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig8/contig8_436656-551003/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig8/contig8_1659026-1766485/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig8/contig8_1-127805/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig8/contig8_647605-758869/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig8/contig8_349097-438248/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig8/contig8_1250748-1353442/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig8/contig8_122445-217836/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig8/contig8_1135472-1253821/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig8/contig8_216141-350871/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig8/contig8_1348750-1455817/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig8/contig8_1450012-1558958/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig8/contig8_546163-651221/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig8/contig8_1556396-1663486/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig8/contig8_1764029-1879238/evm.out
+	writing output /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig8/evm.out
+
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig9/contig9_465724-612129/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig9/contig9_770406-827956/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig9/contig9_605231-772275/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig9/contig9_351329-467788/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig9/contig9_192889-290500/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig9/contig9_98443-195501/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig9/contig9_824868-979209/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig9/contig9_288314-352978/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig9/contig9_976359-1087741/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig9/contig9_1-100523/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig9/contig9_1086131-1221229/evm.out
+	writing output /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig9/evm.out
+
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_2932087-3084304/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_1044767-1367508/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_3417915-3505652/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_858760-975750/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_753145-861907/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_2800069-2936463/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_416664-546410/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_970750-1051256/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_3203302-3327621/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_543862-631526/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_2177192-2262874/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_1997754-2086572/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_125734-301552/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_2646038-2802324/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_2258854-2352433/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_2083276-2179919/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_1679736-1769556/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_2346945-2507836/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_1554386-1682713/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_299846-418437/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_3773071-3913189/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_3709230-3777053/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_1-89550/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_1882410-1999493/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_1455770-1561747/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_3911429-3985673/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_3325191-3420686/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_1365729-1457330/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_3977799-4067220/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_2505984-2649074/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_3503290-3607877/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_87053-128467/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_1765849-1885610/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_3082719-3205394/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_628734-756195/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/contig5_3605595-3710777/evm.out
+	writing output /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5/evm.out
+
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_219403-316738/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_2986135-3111352/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_2758276-2868956/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_1274477-1370622/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_4854128-4952261/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_4423499-4550480/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_3399780-3444558/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_313524-423911/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_1626007-1739769/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_4950277-5110483/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_944720-1046019/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_1-132262/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_2684119-2760704/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_3819133-3932305/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_2619855-2685960/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_4634774-4759008/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_2397406-2484572/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_1041968-1167993/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_1165426-1277374/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_2148719-2289343/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_515190-609581/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_3999689-4130847/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_4754621-4855711/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_2282705-2401828/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_4221277-4331129/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_1915461-2014861/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_421591-517456/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_3441460-3740505/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_1803013-1917205/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_4548981-4637244/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_2483013-2625441/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_3208598-3296166/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_2866535-2991231/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_2012771-2150849/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_4329228-4426385/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_3738950-3821390/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_846178-946855/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_3925864-4003587/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_1526974-1629715/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_4128422-4227058/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_3107382-3210597/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_1366538-1531583/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_726409-847963/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_1737415-1805532/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_608029-731795/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_127304-225037/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/contig4_3292080-3407202/evm.out
+	writing output /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4/evm.out
+
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_3176869-3254381/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_3251433-3359021/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_5613690-5720083/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_3077752-3179717/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_6912528-7010123/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_4711599-4829485/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_4827149-4910281/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_1563569-1679927/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_2618789-2740947/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_2511200-2622308/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_7327300-7429234/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_4285440-4380995/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_3676405-3765336/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_6035200-6115850/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_441889-542428/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_637948-724709/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_2374428-2520259/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_4090874-4200865/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_540849-640334/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_118875-157977/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_6274939-6406315/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_5952375-6037869/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_7608643-7721057/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_5242278-5409946/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_3357521-3457068/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_3761141-3886118/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_5088549-5243932/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_7719558-7798376/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_3455317-3580690/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_7795585-7860730/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_4484948-4610826/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_2954361-3080819/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_5717122-5857737/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_4606845-4716919/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_6727741-6825451/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_6404642-6505798/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_2035105-2088772/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_1675813-1770249/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_7188358-7329616/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_6503892-6646535/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_7426525-7537414/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_5402646-5511865/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_390099-443754/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_1362842-1470170/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_4196858-4287583/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_721200-832075/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_3578628-3678230/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_155799-296684/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_1468284-1565271/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_6113835-6203226/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_5856040-5954000/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_4378465-4488233/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_1226854-1368855/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_6640883-6729475/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_828620-903553/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_294688-391978/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_2734541-2824277/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_6822027-6914156/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_7535824-7610794/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_5508489-5615599/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_901740-1058113/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_4907902-4997108/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_1056392-1128985/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_1127383-1229335/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_2083847-2258605/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_6200463-6290076/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_7008473-7108881/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_2821986-2959151/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_3978859-4093358/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_4994891-5090757/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_1-121661/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_7106213-7198525/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_3884493-3980676/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_2257003-2375984/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/contig1_1767684-2044606/evm.out
+	writing output /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1/evm.out
+
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_690196-824009/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_4528319-4641588/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_2816911-2930018/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_1779503-1879434/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_1481230-1606965/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_814827-918569/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_5488524-5594283/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_5206384-5392680/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_1604106-1675423/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_1671778-1781037/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_288554-396113/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_601725-692625/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_522915-603597/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_4015592-4122849/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_3238589-3339063/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_4974497-5085562/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_3794835-3922040/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_2926691-3037226/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_3730334-3796855/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_1128761-1267584/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_3035389-3127988/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_33468-172347/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_917051-1053876/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_4117511-4238933/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_1334424-1482995/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_5082551-5208853/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_3919867-4019839/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_1975401-2030705/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_4236486-4532156/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_2193100-2281955/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_5390964-5491327/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_2279207-2397670/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_2632698-2715252/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_1265364-1337962/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_170543-290580/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_3337493-3447365/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_1-38578/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_3645003-3733915/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_4842241-4977709/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_1050106-1131139/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_4746777-4844810/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_3125200-3240151/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_2025811-2194653/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_2713686-2818445/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_2393069-2496631/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_2494876-2634302/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_1877887-1977066/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_4638993-4750772/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_3444855-3646719/evm.out
+Parsing /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/contig3_394549-525240/evm.out
+	writing output /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3/evm.out
+
+
+[06/14/21 18:50:39]: perl /opt/linux/centos/7.x/x86_64/pkgs/EVM/1.1.1-live/EvmUtils/convert_EVM_outputs_to_GFF3.pl --partitions partitions_list.out --output evm.out --genome /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/genome.softmasked.fa
+[06/14/21 18:50:44]: // Processing contig7, /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig7
+// Processing contig1, /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig1
+// Processing contig6, /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig6
+// Processing contig9, /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig9
+// Processing contig2, /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig2
+// Processing contig3, /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig3
+// Processing contig4, /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig4
+// Processing contig8, /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig8
+// Processing contig10, /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig10
+// Processing contig5, /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/EVM/contig5
+
+[06/14/21 18:50:44]: Converting to GFF3 and collecting all EVM results

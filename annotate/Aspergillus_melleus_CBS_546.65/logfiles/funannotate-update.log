@@ -1,0 +1,104 @@
+[06/14/21 22:27:02]: /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/bin/funannotate update --cpus 16 -i annotate/Aspergillus_melleus_CBS_546.65 --out annotate/Aspergillus_melleus_CBS_546.65 --sbt lib/authors_reference.sbt --memory 64G --pasa_db mysql --trinity lib/RNASeq//assembled.fasta
+
+[06/14/21 22:27:03]: OS: CentOS Linux 7, 64 cores, ~ 528 GB RAM. Python: 3.8.5
+[06/14/21 22:27:03]: Running 1.8.8
+[06/14/21 22:27:05]: Found relevant files in annotate/Aspergillus_melleus_CBS_546.65/training, will re-use them:
+	Forward reads: annotate/Aspergillus_melleus_CBS_546.65/training/left.fq.gz
+	Reverse reads: annotate/Aspergillus_melleus_CBS_546.65/training/right.fq.gz
+	Trinity results: annotate/Aspergillus_melleus_CBS_546.65/training/funannotate_train.trinity-GG.fasta
+	PASA config file: annotate/Aspergillus_melleus_CBS_546.65/training/pasa/alignAssembly.txt
+	BAM alignments: annotate/Aspergillus_melleus_CBS_546.65/training/funannotate_train.coordSorted.bam
+[06/14/21 22:27:27]: Reannotating Aspergillus melleus, NCBI accession: None
+[06/14/21 22:27:27]: Previous annotation consists of: 12,841 protein coding gene models and 213 non-coding gene models
+[06/14/21 22:27:27]: Input reads: ('annotate/Aspergillus_melleus_CBS_546.65/training/left.fq.gz', 'annotate/Aspergillus_melleus_CBS_546.65/training/right.fq.gz', None)
+[06/14/21 22:27:27]: Trimmomatic will be skipped
+[06/14/21 22:27:27]: Quality trimmed reads: ('annotate/Aspergillus_melleus_CBS_546.65/training/left.fq.gz', 'annotate/Aspergillus_melleus_CBS_546.65/training/right.fq.gz', None)
+[06/14/21 22:27:27]: FASTQ headers seem compatible with Trinity
+[06/14/21 22:27:27]: Read normalization will be skipped
+[06/14/21 22:27:27]: Normalized reads: ('annotate/Aspergillus_melleus_CBS_546.65/training/left.fq.gz', 'annotate/Aspergillus_melleus_CBS_546.65/training/right.fq.gz', None)
+[06/14/21 22:27:27]: Long reads: (None, None, None)
+[06/14/21 22:27:27]: Long reads FASTA format: (None, None, None)
+[06/14/21 22:27:27]: Long SeqCleaned reads: (None, None, None)
+[06/14/21 22:27:28]: Existing BAM alignments found: annotate/Aspergillus_melleus_CBS_546.65/update_misc/trinity.alignments.bam, annotate/Aspergillus_melleus_CBS_546.65/update_misc/transcript.alignments.bam
+[06/14/21 22:27:28]: /opt/linux/centos/7.x/x86_64/pkgs/PASA/2.4.1/scripts/pasa_asmbl_genes_to_GFF3.dbi -M Aspergillus_melleus_CBS_546_65_pasa:m02:3901 -p jstajich:rudy22
+[06/14/21 22:27:31]: Existing PASA database contains 10,658 gene models, validated FASTA headers match
+[06/14/21 22:27:31]: /opt/linux/centos/7.x/x86_64/pkgs/PASA/2.4.1/bin/cdbfasta annotate/Aspergillus_melleus_CBS_546.65/update_misc/genome.fa
+[06/14/21 22:27:31]: 11 entries from file annotate/Aspergillus_melleus_CBS_546.65/update_misc/genome.fa were indexed in file annotate/Aspergillus_melleus_CBS_546.65/update_misc/genome.fa.cidx
+
+[06/14/21 22:27:31]: Running PASA annotation comparison step 1
+[06/14/21 22:27:31]: /opt/linux/centos/7.x/x86_64/pkgs/PASA/2.4.1/Launch_PASA_pipeline.pl -c /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/update_misc/pasa/annotCompare.txt -g /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/update_misc/genome.fa -t /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/update_misc/trinity.fasta.clean -A -L --CPU 16 --annots /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/update_misc/genome.gff3
+[06/14/21 22:42:35]: Running PASA annotation comparison step 2
+[06/14/21 22:42:35]: /opt/linux/centos/7.x/x86_64/pkgs/PASA/2.4.1/Launch_PASA_pipeline.pl -c /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/update_misc/pasa/annotCompare.txt -g /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/update_misc/genome.fa -t /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/update_misc/trinity.fasta.clean -A -L --CPU 16 --annots /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/update_misc/pasa/Aspergillus_melleus_CBS_546_65_pasa.gene_structures_post_PASA_updates.60581.gff3
+[06/14/21 22:59:05]: copying final PASA GFF3 to output: annotate/Aspergillus_melleus_CBS_546.65/update_misc/pasa/Aspergillus_melleus_CBS_546_65_pasa.gene_structures_post_PASA_updates.23985.gff3
+[06/14/21 22:59:05]: Using Kallisto TPM data to determine which PASA gene models to select at each locus
+[06/14/21 22:59:05]: Building Kallisto index
+[06/14/21 22:59:05]: /opt/linux/centos/7.x/x86_64/pkgs/PASA/2.4.1/misc_utilities/gff3_file_to_proteins.pl annotate/Aspergillus_melleus_CBS_546.65/update_misc/pasa_final.gff3 annotate/Aspergillus_melleus_CBS_546.65/update_misc/genome.fa cDNA
+[06/14/21 22:59:22]: kallisto index -i annotate/Aspergillus_melleus_CBS_546.65/update_misc/getBestModel/bestModel annotate/Aspergillus_melleus_CBS_546.65/update_misc/getBestModel/transcripts.fa
+[06/14/21 23:00:20]: 
+[build] loading fasta file annotate/Aspergillus_melleus_CBS_546.65/update_misc/getBestModel/transcripts.fa
+[build] k-mer length: 31
+[build] counting k-mers ... done.
+[build] building target de Bruijn graph ...  done 
+[build] creating equivalence classes ...  done
+[build] target de Bruijn graph has 19692 contigs and contains 17961017 k-mers 
+
+
+[06/14/21 23:00:20]: Mapping reads using pseudoalignment in Kallisto
+[06/14/21 23:00:20]: kallisto quant -i annotate/Aspergillus_melleus_CBS_546.65/update_misc/getBestModel/bestModel -o annotate/Aspergillus_melleus_CBS_546.65/update_misc/getBestModel/kallisto --plaintext -t 16 annotate/Aspergillus_melleus_CBS_546.65/training/left.fq.gz annotate/Aspergillus_melleus_CBS_546.65/training/right.fq.gz
+[06/14/21 23:04:21]: 
+[quant] fragment length distribution will be estimated from the data
+[index] k-mer length: 31
+[index] number of targets: 13,661
+[index] number of k-mers: 17,961,017
+[index] number of equivalence classes: 15,379
+[quant] running in paired-end mode
+[quant] will process pair 1: annotate/Aspergillus_melleus_CBS_546.65/training/left.fq.gz
+                             annotate/Aspergillus_melleus_CBS_546.65/training/right.fq.gz
+[quant] finding pseudoalignments for the reads ... done
+[quant] processed 37,462,126 reads, 15,963,699 reads pseudoaligned
+[quant] estimated average fragment length: 294.132
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 873 rounds
+
+
+[06/14/21 23:04:22]: Parsing Kallisto results. Keeping alt-splicing transcripts if expressed at least 10.0% of highest transcript per locus.
+[06/14/21 23:04:24]: Wrote 13,183 transcripts derived from 12,850 protein coding loci.
+[06/14/21 23:04:25]: bedtools intersect -sorted -v -a /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/update_misc/genome.trna.gff3.sorted.gff3 -b /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/update_misc/bestmodels.gff3.sorted.gff3
+[06/14/21 23:04:44]: Validating gene models (renaming, checking translations, filtering, etc)
+[06/14/21 23:04:53]: Writing 13,061 loci to TBL format: dropped 0 overlapping, 1 too short, and 0 frameshift gene models
+[06/14/21 23:04:54]: Converting to Genbank format
+[06/14/21 23:04:54]: /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/bin/python3.8 /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/lib/python3.8/site-packages/funannotate/aux_scripts/tbl2asn_parallel.py -i annotate/Aspergillus_melleus_CBS_546.65/update_misc/tbl2asn/genome.tbl -f annotate/Aspergillus_melleus_CBS_546.65/update_misc/genome.fa -o annotate/Aspergillus_melleus_CBS_546.65/update_misc/tbl2asn --sbt lib/authors_reference.sbt -d annotate/Aspergillus_melleus_CBS_546.65/update_results/Aspergillus_melleus_CBS_546.65.discrepency.report.txt -s Aspergillus melleus -t -l paired-ends -v 1 -c 16 --strain CBS 546.65
+[06/14/21 23:06:43]: Collecting final annotation files
+[06/14/21 23:07:23]: Parsing GenBank files...comparing annotation
+[06/14/21 23:14:01]: Updated annotation complete:
+-------------------------------------------------------
+Total Gene Models:	13,061
+Total transcripts:	13,395
+New Gene Models:	19
+No Change:		10,595
+Update UTRs:		2,444
+Exons Changed:		3
+Exons/CDS Changed:	0
+Dropped Models:		0
+CDS AED:		0.002
+mRNA AED:		0.024
+-------------------------------------------------------
+[06/14/21 23:14:02]: Funannotate update is finished, output files are in the annotate/Aspergillus_melleus_CBS_546.65/update_results folder
+[06/14/21 23:14:02]: There are 3 gene models that need to be fixed.
+[06/14/21 23:14:02]: Manually edit the tbl file annotate/Aspergillus_melleus_CBS_546.65/update_results/Aspergillus_melleus_CBS_546.65.tbl, then run:
+
+funannotate fix -i annotate/Aspergillus_melleus_CBS_546.65/update_results/Aspergillus_melleus_CBS_546.65.gbk -t annotate/Aspergillus_melleus_CBS_546.65/update_results/Aspergillus_melleus_CBS_546.65.tbl
+
+[06/14/21 23:14:02]: After the problematic gene models are fixed, you can proceed with functional annotation.
+[06/14/21 23:14:02]: Your next step might be functional annotation, suggested commands:
+-------------------------------------------------------
+Run InterProScan (Docker required): 
+funannotate iprscan -i annotate/Aspergillus_melleus_CBS_546.65 -m docker -c 16
+
+Run antiSMASH: 
+funannotate remote -i annotate/Aspergillus_melleus_CBS_546.65 -m antismash -e youremail@server.edu
+
+Annotate Genome: 
+funannotate annotate -i annotate/Aspergillus_melleus_CBS_546.65 --cpus 16 --sbt yourSBTfile.txt
+-------------------------------------------------------
+                

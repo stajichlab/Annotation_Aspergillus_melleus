@@ -1,0 +1,2107 @@
+Will create parameters for a EUKARYOTIC species!
+creating directory /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/ ...
+creating /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_parameters.cfg ...
+creating /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_weightmatrix.txt ...
+creating /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_metapars.cfg ...
+The necessary files for training aspergillus_melleus_cbs_546.65 have been created.
+Now, either run etraining or optimize_parameters.pl with --species=aspergillus_melleus_cbs_546.65.
+etraining quickly estimates the parameters from a file with training genes.
+optimize_augustus.pl alternates running etraining and augustus to find optimal metaparameters.
+
+# Read in 667 genbank sequences.
+Quantiles of the GC contents in the training set:
+0%	0.442
+5%	0.474	10%	0.486
+15%	0.492	20%	0.497
+25%	0.502	30%	0.504
+35%	0.508	40%	0.51
+45%	0.513	50%	0.517
+55%	0.519	60%	0.523
+65%	0.526	70%	0.529
+75%	0.533	80%	0.536
+85%	0.539	90%	0.543
+95%	0.551	100%	0.592
+HMM-training the parameters...
+i= 0 bc= (0.237, 0.263, 0.263, 0.237)
+ ** building model for exons *EXON*
+gene g_7-T1 transcr. 1 in sequence contig1_776256-778494: Initial exon has length < 3!
+gene g_40-T1 transcr. 1 in sequence contig1_3921174-3923611: Initial exon has length < 3!
+start codon frequencies: ATG(665)
+# admissible start codons and their probabilities: ATG(1), CTG(0), TTG(0)
+ number of bases in the reading frames: 323546 324203 324205
+--- frame = 0 ---    minPatSum = 233
+--- frame = 1 ---    minPatSum = 233
+--- frame = 2 ---    minPatSum = 233
+--- initial frame = 0 ---    minPatSum = 233
+--- initial frame = 1 ---    minPatSum = 233
+--- initial frame = 2 ---    minPatSum = 233
+--- internal exon terminal frame = 0 ---    minPatSum = 233
+--- internal exon terminal frame = 1 ---    minPatSum = 233
+--- internal exon terminal frame = 2 ---    minPatSum = 233
+single, initial, internal, terminal mean exon lengths :
+n.a.	275	331	544
+single exon : 0
+initial exon 0 : 254
+initial exon 1 : 241
+initial exon 2 : 170
+internal exon 0 : 310
+internal exon 1 : 233
+internal exon 2 : 248
+terminal exon : 667
+Frequency of stop codons:
+tag:  195 (0.292)
+taa:  223 (0.334)
+tga:  249 (0.373)
+end *EXON*
+Storing parameters to file...
+Writing exon model parameters [1] to file /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_exon_probs.pbl.
+WARNING: parameter --cpus has value 24 but parameter --kfold has value 8. --kfold limits the number of --cpus that can be used. Will not use only 8 CPUs. Please abort and restart with --kfold=24 to really use that number of CPUs!
+Splitting training file into 8 buckets...
+Reading in the meta parameters used for optimization from /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/generic/generic_metapars.cfg...
+Reading in the starting meta parameters from /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_parameters.cfg...
+bucket 7 6 8 5 3 2 4 1 
+starting accuracy: 0.9610, 0.9247, 0.7496, 0.6975, 0.5600, 0.5001, -1.00, -1.00, starting target: 0.7808
+improving parameter /Constant/dss_end curently set to 4
+1-4
+/Constant/dss_end: checking values 1	2	3	4
+bucket 7 8 6 5 1 3 4 2 
+bucket 8 6 7 5 3 1 2 4 
+bucket 6 8 7 5 3 1 4 2 
+retrieve accuracy from previous computation
+values  1	2	3	4
+targets 0.7356	0.7322	0.7703	0.7808
+improving parameter /Constant/dss_start curently set to 3
+1-3
+/Constant/dss_start: checking values 1	2	3
+bucket 8 5 6 7 3 1 2 4 
+bucket 5 6 7 8 2 3 1 4 
+retrieve accuracy from previous computation
+values  1	2	3
+targets 0.7783	0.7771	0.7808
+improving parameter /Constant/ass_start curently set to 3
+1-3
+/Constant/ass_start: checking values 1	2	3
+bucket 6 7 8 5 3 2 1 4 
+found improvement: 0.9671, 0.9250, 0.7905, 0.7228, 0.6192, 0.5443, -1.00, -1.00, optimal target: 0.8054
+changing /Constant/ass_start to 1
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	1
+/Constant/ass_end	2
+/Constant/ass_upwindow_size	30
+/IntronModel/d	100
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	3
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	20
+/Constant/init_coding_len	15
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	5
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	10
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00173
+/ExonModel/minPatSum	233.3
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_parameters.cfg...
+bucket 6 7 8 3 5 1 4 2 
+found improvement: 0.9660, 0.9238, 0.7990, 0.7241, 0.6384, 0.5582, -1.00, -1.00, optimal target: 0.8103
+changing /Constant/ass_start to 2
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	2
+/Constant/ass_end	2
+/Constant/ass_upwindow_size	30
+/IntronModel/d	100
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	3
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	20
+/Constant/init_coding_len	15
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	5
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	10
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00173
+/ExonModel/minPatSum	233.3
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_parameters.cfg...
+retrieve accuracy from previous computation
+values  1	2	3
+targets 0.8054	0.8103	0.7808
+/Constant/ass_start: checking values 2
+retrieve accuracy from previous computation
+values  2
+targets 0.8103
+improving parameter /Constant/ass_end curently set to 2
+0-4
+/Constant/ass_end: checking values 0	1	2	3	4
+bucket 6 8 7 5 3 2 4 1 
+bucket 8 7 6 4 5 3 1 2 
+found improvement: 0.9679, 0.9235, 0.8036, 0.7305, 0.6497, 0.5713, -1.00, -1.00, optimal target: 0.8152
+changing /Constant/ass_end to 1
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	2
+/Constant/ass_end	1
+/Constant/ass_upwindow_size	30
+/IntronModel/d	100
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	3
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	20
+/Constant/init_coding_len	15
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	5
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	10
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00173
+/ExonModel/minPatSum	233.3
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_parameters.cfg...
+retrieve accuracy from previous computation
+bucket 6 5 7 8 3 4 1 2 
+bucket 6 8 5 7 3 1 4 2 
+values  0	1	2	3	4
+targets 0.8100	0.8152	0.8103	0.7823	0.7570
+/Constant/ass_end: checking values 1	2
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  1	2
+targets 0.8152	0.8103
+improving parameter /Constant/ass_upwindow_size curently set to 30
+1-50
+/Constant/ass_upwindow_size: checking values 1	13	25	37	50
+bucket 6 7 8 5 2 3 1 4 
+bucket 6 7 8 3 5 1 4 2 
+bucket 6 7 8 3 5 4 1 2 
+bucket 6 7 8 5 3 2 1 4 
+bucket 5 6 7 8 3 4 1 2 
+values  1	13	25	37	50
+targets 0.7477	0.7919	0.8077	0.7935	0.6950
+improving parameter /IntronModel/d curently set to 100
+100-950
+/IntronModel/d: checking values 100	312	525	737	950
+retrieve accuracy from previous computation
+bucket 8 6 7 2 5 1 3 4 
+found improvement: 0.9730, 0.9273, 0.8004, 0.7382, 0.6401, 0.5670, -1.00, -1.00, optimal target: 0.8160
+changing /IntronModel/d to 312
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	2
+/Constant/ass_end	1
+/Constant/ass_upwindow_size	30
+/IntronModel/d	312
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	3
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	20
+/Constant/init_coding_len	15
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	5
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	10
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00173
+/ExonModel/minPatSum	233.3
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_parameters.cfg...
+bucket 8 7 6 5 3 2 1 4 
+found improvement: 0.9685, 0.9285, 0.8070, 0.7421, 0.6601, 0.5899, -1.00, -1.00, optimal target: 0.8219
+changing /IntronModel/d to 525
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	2
+/Constant/ass_end	1
+/Constant/ass_upwindow_size	30
+/IntronModel/d	525
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	3
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	20
+/Constant/init_coding_len	15
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	5
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	10
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00173
+/ExonModel/minPatSum	233.3
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_parameters.cfg...
+bucket 7 8 6 3 5 4 1 2 
+bucket 8 6 7 5 1 3 2 4 
+values  100	312	525	737	950
+targets 0.8152	0.8160	0.8219	0.8059	0.8115
+/IntronModel/d: checking values 313	419	525	631	737
+bucket 7 6 8 4 3 5 2 1 
+bucket 6 7 8 5 3 2 4 1 
+retrieve accuracy from previous computation
+bucket 6 7 8 3 1 5 4 2 
+retrieve accuracy from previous computation
+values  313	419	525	631	737
+targets 0.8160	0.8189	0.8219	0.8092	0.8059
+improving parameter /IntronModel/ass_motif_memory curently set to 3
+0-3
+/IntronModel/ass_motif_memory: checking values 0	1	2	3
+bucket 8 7 6 5 2 3 4 1 
+bucket 6 3 7 8 5 4 1 2 
+bucket 7 6 8 5 3 4 1 2 
+retrieve accuracy from previous computation
+values  0	1	2	3
+targets 0.7806	0.7998	0.8020	0.8219
+improving parameter /IntronModel/ass_motif_radius curently set to 3
+0-4
+/IntronModel/ass_motif_radius: checking values 0	1	2	3	4
+bucket 7 8 6 5 3 1 2 4 
+bucket 7 6 3 8 5 4 2 1 
+bucket 6 8 5 7 2 3 4 1 
+retrieve accuracy from previous computation
+bucket 7 6 8 3 5 4 2 1 
+values  0	1	2	3	4
+targets 0.8144	0.8179	0.8195	0.8219	0.8124
+improving parameter /ExonModel/tis_motif_memory curently set to 3
+0-3
+/ExonModel/tis_motif_memory: checking values 0	1	2	3
+bucket 7 6 5 3 8 4 1 2 
+found improvement: 0.9775, 0.9268, 0.8253, 0.7431, 0.6704, 0.5845, -1.00, -1.00, optimal target: 0.8274
+changing /ExonModel/tis_motif_memory to 0
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	2
+/Constant/ass_end	1
+/Constant/ass_upwindow_size	30
+/IntronModel/d	525
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	0
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	20
+/Constant/init_coding_len	15
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	5
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	10
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00173
+/ExonModel/minPatSum	233.3
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_parameters.cfg...
+bucket 7 8 6 4 5 3 1 2 
+bucket 5 7 6 8 4 3 1 2 
+found improvement: 0.9770, 0.9286, 0.8237, 0.7469, 0.6897, 0.6074, -1.00, -1.00, optimal target: 0.8322
+changing /ExonModel/tis_motif_memory to 2
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	2
+/Constant/ass_end	1
+/Constant/ass_upwindow_size	30
+/IntronModel/d	525
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	2
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	20
+/Constant/init_coding_len	15
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	5
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	10
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00173
+/ExonModel/minPatSum	233.3
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_parameters.cfg...
+retrieve accuracy from previous computation
+values  0	1	2	3
+targets 0.8274	0.8236	0.8322	0.8219
+/ExonModel/tis_motif_memory: checking values 2
+retrieve accuracy from previous computation
+values  2
+targets 0.8322
+improving parameter /ExonModel/tis_motif_radius curently set to 2
+0-3
+/ExonModel/tis_motif_radius: checking values 0	1	2	3
+bucket 8 7 6 5 4 3 2 1 
+bucket 6 7 5 4 8 3 1 2 
+retrieve accuracy from previous computation
+bucket 6 8 5 3 7 2 4 1 
+values  0	1	2	3
+targets 0.8208	0.8212	0.8322	0.8287
+improving parameter /Constant/trans_init_window curently set to 20
+0-25
+/Constant/trans_init_window: checking values 0	6	12	18	25
+bucket 8 5 6 3 7 4 1 2 
+bucket 7 8 6 5 3 4 2 1 
+found improvement: 0.9778, 0.9277, 0.8339, 0.7550, 0.7097, 0.6254, -1.00, -1.00, optimal target: 0.8397
+changing /Constant/trans_init_window to 6
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	2
+/Constant/ass_end	1
+/Constant/ass_upwindow_size	30
+/IntronModel/d	525
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	2
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	6
+/Constant/init_coding_len	15
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	5
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	10
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00173
+/ExonModel/minPatSum	233.3
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_parameters.cfg...
+bucket 7 8 5 6 3 2 4 1 
+found improvement: 0.9810, 0.9277, 0.8445, 0.7559, 0.7202, 0.6350, -1.00, -1.00, optimal target: 0.8445
+changing /Constant/trans_init_window to 12
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	2
+/Constant/ass_end	1
+/Constant/ass_upwindow_size	30
+/IntronModel/d	525
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	2
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	12
+/Constant/init_coding_len	15
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	5
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	10
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00173
+/ExonModel/minPatSum	233.3
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_parameters.cfg...
+bucket 6 7 8 5 3 4 2 1 
+bucket 6 7 3 8 2 5 1 4 
+values  0	6	12	18	25
+targets 0.8218	0.8397	0.8445	0.8339	0.8284
+/Constant/trans_init_window: checking values 6	9	12	15	18
+retrieve accuracy from previous computation
+bucket 6 7 8 3 5 4 1 2 
+retrieve accuracy from previous computation
+bucket 6 8 5 7 3 4 1 2 
+retrieve accuracy from previous computation
+values  6	9	12	15	18
+targets 0.8397	0.8429	0.8445	0.8367	0.8339
+improving parameter /Constant/init_coding_len curently set to 15
+0-18
+/Constant/init_coding_len: checking values 0	4	9	13	18
+bucket 7 3 6 8 5 4 1 2 
+bucket 6 7 8 5 3 4 1 2 
+found improvement: 0.9810, 0.9277, 0.8445, 0.7590, 0.7202, 0.6355, -1.00, -1.00, optimal target: 0.8451
+changing /Constant/init_coding_len to 4
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	2
+/Constant/ass_end	1
+/Constant/ass_upwindow_size	30
+/IntronModel/d	525
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	2
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	12
+/Constant/init_coding_len	4
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	5
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	10
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00173
+/ExonModel/minPatSum	233.3
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_parameters.cfg...
+bucket 7 6 8 5 1 3 4 2 
+bucket 8 6 7 4 5 3 1 2 
+bucket 6 7 8 3 5 4 1 2 
+found improvement: 0.9815, 0.9277, 0.8474, 0.7586, 0.7202, 0.6350, -1.00, -1.00, optimal target: 0.8457
+changing /Constant/init_coding_len to 18
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	2
+/Constant/ass_end	1
+/Constant/ass_upwindow_size	30
+/IntronModel/d	525
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	2
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	12
+/Constant/init_coding_len	18
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	5
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	10
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00173
+/ExonModel/minPatSum	233.3
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_parameters.cfg...
+values  0	4	9	13	18
+targets 0.8443	0.8451	0.8440	0.8424	0.8457
+/Constant/init_coding_len: checking values 14	15	16	17	18
+bucket 6 8 7 5 3 2 4 1 
+retrieve accuracy from previous computation
+bucket 6 3 8 7 5 1 4 2 
+bucket 3 7 6 8 5 2 1 4 
+retrieve accuracy from previous computation
+values  14	15	16	17	18
+targets 0.8413	0.8445	0.8445	0.8445	0.8457
+improving parameter /ExonModel/patpseudocount curently set to 5.0
+0.5-5
+/ExonModel/patpseudocount: checking values 0.5	1.625	2.75	3.875	5
+bucket 7 6 8 4 5 3 1 2 
+bucket 7 6 5 8 3 2 4 1 
+bucket 3 6 7 8 5 4 2 1 
+bucket 5 6 7 8 3 2 4 1 
+bucket 6 5 7 8 3 4 2 1 
+values  0.5	1.625	2.75	3.875	5
+targets 0.8355	0.8353	0.8397	0.8457	0.8457
+improving parameter /ExonModel/etpseudocount curently set to 3
+0-10
+/ExonModel/etpseudocount: checking values 0	2	5	7	10
+bucket 6 3 8 7 5 4 2 1 
+bucket 6 8 3 7 5 4 1 2 
+bucket 8 6 7 5 3 4 2 1 
+bucket 6 7 5 8 3 4 2 1 
+bucket 7 8 6 5 3 2 4 1 
+values  0	2	5	7	10
+targets 0.8457	0.8457	0.8457	0.8457	0.8457
+improving parameter /ExonModel/etorder curently set to 2
+0-3
+/ExonModel/etorder: checking values 0	1	2	3
+bucket 7 6 5 3 8 4 2 1 
+bucket 6 7 5 8 2 3 4 1 
+retrieve accuracy from previous computation
+bucket 6 7 8 5 3 4 2 1 
+values  0	1	2	3
+targets 0.8457	0.8457	0.8457	0.8457
+improving parameter /Constant/intterm_coding_len curently set to 5
+0-13
+/Constant/intterm_coding_len: checking values 0	3	6	9	13
+bucket 8 7 6 5 2 3 4 1 
+bucket 6 7 3 5 8 4 1 2 
+bucket 6 3 7 5 8 2 1 4 
+found improvement: 0.9816, 0.9277, 0.8501, 0.7609, 0.7299, 0.6432, -1.00, -1.00, optimal target: 0.8485
+changing /Constant/intterm_coding_len to 6
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	2
+/Constant/ass_end	1
+/Constant/ass_upwindow_size	30
+/IntronModel/d	525
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	2
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	12
+/Constant/init_coding_len	18
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	6
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	10
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00173
+/ExonModel/minPatSum	233.3
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_parameters.cfg...
+bucket 5 6 8 7 4 3 2 1 
+bucket 7 2 6 8 5 3 1 4 
+values  0	3	6	9	13
+targets 0.8450	0.8412	0.8485	0.8453	0.8402
+/Constant/intterm_coding_len: checking values 3	4	6	7	9
+retrieve accuracy from previous computation
+bucket 7 8 6 5 2 3 4 1 
+retrieve accuracy from previous computation
+bucket 6 7 8 5 1 3 2 4 
+retrieve accuracy from previous computation
+values  3	4	6	7	9
+targets 0.8412	0.8457	0.8485	0.8437	0.8453
+improving parameter /ExonModel/slope_of_bandwidth curently set to 0.3
+0.05-0.6
+/ExonModel/slope_of_bandwidth: checking values 0.05	0.1875	0.325	0.4625	0.6
+bucket 8 6 7 3 5 1 4 2 
+bucket 5 7 6 8 3 2 1 4 
+bucket 7 8 5 6 3 4 2 1 
+bucket 7 8 6 5 4 3 2 1 
+bucket 8 7 5 6 3 1 4 2 
+values  0.05	0.1875	0.325	0.4625	0.6
+targets 0.8485	0.8485	0.8485	0.8482	0.8482
+improving parameter /ExonModel/minwindowcount curently set to 10
+1-15
+/ExonModel/minwindowcount: checking values 1	4	8	11	15
+bucket 8 7 6 5 3 4 1 2 
+found improvement: 0.9801, 0.9291, 0.8534, 0.7625, 0.7299, 0.6432, -1.00, -1.00, optimal target: 0.8494
+changing /ExonModel/minwindowcount to 1
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	2
+/Constant/ass_end	1
+/Constant/ass_upwindow_size	30
+/IntronModel/d	525
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	2
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	12
+/Constant/init_coding_len	18
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	6
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	1
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00173
+/ExonModel/minPatSum	233.3
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_parameters.cfg...
+bucket 6 5 7 8 2 4 3 1 
+found improvement: 0.9815, 0.9305, 0.8501, 0.7641, 0.7299, 0.6432, -1.00, -1.00, optimal target: 0.8495
+changing /ExonModel/minwindowcount to 4
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	2
+/Constant/ass_end	1
+/Constant/ass_upwindow_size	30
+/IntronModel/d	525
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	2
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	12
+/Constant/init_coding_len	18
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	6
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	4
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00173
+/ExonModel/minPatSum	233.3
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_parameters.cfg...
+bucket 8 7 6 3 5 2 4 1 
+bucket 5 8 6 3 1 7 4 2 
+bucket 6 7 5 8 2 3 4 1 
+values  1	4	8	11	15
+targets 0.8494	0.8495	0.8485	0.8485	0.8485
+/ExonModel/minwindowcount: checking values 2	3	4	5	7
+bucket 6 5 3 7 8 1 2 4 
+bucket 7 8 6 5 2 3 4 1 
+retrieve accuracy from previous computation
+bucket 7 6 5 8 3 2 1 4 
+bucket 6 8 3 5 7 1 4 2 
+values  2	3	4	5	7
+targets 0.8480	0.8480	0.8495	0.8495	0.8485
+improving parameter /IGenicModel/patpseudocount curently set to 5.0
+0.5-7
+/IGenicModel/patpseudocount: checking values 0.5	2.125	3.75	5.375	7
+bucket 5 8 7 3 6 2 4 1 
+bucket 8 6 7 5 2 3 4 1 
+bucket 8 6 7 5 3 1 4 2 
+bucket 7 8 6 3 1 2 5 4 
+bucket 6 8 3 7 5 4 2 1 
+values  0.5	2.125	3.75	5.375	7
+targets 0.8495	0.8495	0.8495	0.8495	0.8495
+improving parameter /IntronModel/patpseudocount curently set to 5.0
+0.5-7
+/IntronModel/patpseudocount: checking values 0.5	2.125	3.75	5.375	7
+bucket 6 7 3 8 5 4 2 1 
+bucket 8 7 3 6 5 4 2 1 
+bucket 8 7 6 3 5 2 1 4 
+bucket 6 7 8 4 5 3 1 2 
+bucket 6 3 8 7 5 1 4 2 
+values  0.5	2.125	3.75	5.375	7
+targets 0.8495	0.8495	0.8495	0.8495	0.8495
+improving parameter /IntronModel/slope_of_bandwidth curently set to 0.4
+0.05-0.6
+/IntronModel/slope_of_bandwidth: checking values 0.05	0.1875	0.325	0.4625	0.6
+bucket 6 7 8 5 3 1 2 4 
+bucket 5 6 7 8 1 4 3 2 
+bucket 3 6 7 8 5 1 2 4 
+bucket 8 5 3 6 7 4 2 1 
+bucket 5 7 8 3 6 2 1 4 
+values  0.05	0.1875	0.325	0.4625	0.6
+targets 0.8462	0.8495	0.8452	0.8495	0.8495
+improving parameter /IntronModel/minwindowcount curently set to 4
+1-8
+/IntronModel/minwindowcount: checking values 1	2	4	6	8
+bucket 5 7 8 3 2 6 1 4 
+bucket 8 7 6 3 1 5 4 2 
+retrieve accuracy from previous computation
+bucket 7 6 3 5 8 2 1 4 
+bucket 7 6 8 3 5 1 4 2 
+values  1	2	4	6	8
+targets 0.8495	0.8495	0.8495	0.8492	0.8492
+improving parameter /IntronModel/asspseudocount curently set to 0.00266
+0.0005-0.03
+/IntronModel/asspseudocount: checking values 0.0005	0.007875	0.01525	0.022625	0.03
+bucket 6 8 7 5 2 3 4 1 
+bucket 8 7 6 5 4 3 2 1 
+bucket 5 6 3 7 8 4 1 2 
+bucket 8 6 4 5 7 3 2 1 
+bucket 6 7 8 3 5 1 4 2 
+values  0.0005	0.007875	0.01525	0.022625	0.03
+targets 0.8495	0.8495	0.8495	0.8495	0.8495
+improving parameter /IntronModel/dsspseudocount curently set to 0.0005
+0.0002-0.04
+/IntronModel/dsspseudocount: checking values 0.0002	0.01015	0.0201	0.03005	0.04
+bucket 5 6 7 8 3 1 2 4 
+bucket 7 8 6 5 2 3 4 1 
+bucket 6 7 8 5 3 4 2 1 
+bucket 7 8 5 6 4 3 1 2 
+bucket 7 3 8 6 5 2 4 1 
+values  0.0002	0.01015	0.0201	0.03005	0.04
+targets 0.8495	0.8299	0.8144	0.8044	0.8039
+improving parameter /IntronModel/dssneighborfactor curently set to 0.00173
+0.0001-0.01
+/IntronModel/dssneighborfactor: checking values 0.0001	0.002575	0.00505	0.007525	0.01
+bucket 6 7 5 8 3 1 2 4 
+bucket 6 8 7 5 3 2 4 1 
+bucket 5 8 6 7 2 1 4 3 
+found improvement: 0.9814, 0.9305, 0.8538, 0.7635, 0.7299, 0.6432, -1.00, -1.00, optimal target: 0.8501
+changing /IntronModel/dssneighborfactor to 0.00505
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	2
+/Constant/ass_end	1
+/Constant/ass_upwindow_size	30
+/IntronModel/d	525
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	2
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	12
+/Constant/init_coding_len	18
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	6
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	4
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00505
+/ExonModel/minPatSum	233.3
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_parameters.cfg...
+bucket 6 7 8 5 3 4 2 1 
+bucket 6 7 3 5 8 4 1 2 
+values  0.0001	0.002575	0.00505	0.007525	0.01
+targets 0.8130	0.8495	0.8501	0.8501	0.8495
+/IntronModel/dssneighborfactor: checking values 0.002575	0.0038125	0.00505	0.0062875	0.007525
+retrieve accuracy from previous computation
+bucket 6 7 5 8 3 2 4 1 
+retrieve accuracy from previous computation
+bucket 7 6 8 5 3 1 4 2 
+retrieve accuracy from previous computation
+values  0.002575	0.0038125	0.00505	0.0062875	0.007525
+targets 0.8495	0.8479	0.8501	0.8501	0.8501
+improving parameter /ExonModel/minPatSum curently set to 233.3
+100-600
+/ExonModel/minPatSum: checking values 100	225	350	475	600
+bucket 5 6 3 1 8 7 4 2 
+bucket 6 8 5 7 4 2 1 3 
+bucket 7 6 5 8 3 2 4 1 
+found improvement: 0.9786, 0.9304, 0.8571, 0.7641, 0.7404, 0.6515, -1.00, -1.00, optimal target: 0.8523
+changing /ExonModel/minPatSum to 350
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	2
+/Constant/ass_end	1
+/Constant/ass_upwindow_size	30
+/IntronModel/d	525
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	2
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	12
+/Constant/init_coding_len	18
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	6
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	4
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00505
+/ExonModel/minPatSum	350
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_parameters.cfg...
+bucket 7 8 6 5 3 4 1 2 
+bucket 6 5 7 8 3 4 1 2 
+values  100	225	350	475	600
+targets 0.8501	0.8501	0.8523	0.8465	0.8485
+/ExonModel/minPatSum: checking values 225	287.5	350	412.5	475
+retrieve accuracy from previous computation
+bucket 6 5 7 8 3 2 1 4 
+retrieve accuracy from previous computation
+bucket 7 6 5 8 3 2 4 1 
+retrieve accuracy from previous computation
+values  225	287.5	350	412.5	475
+targets 0.8501	0.8491	0.8523	0.8459	0.8465
+improving parameter /Constant/probNinCoding curently set to 0.23
+0.15-.25
+/Constant/probNinCoding: checking values 0.15	0.175	0.2	0.225	0.25
+bucket 6 8 3 7 4 1 5 2 
+bucket 6 7 5 3 8 4 1 2 
+bucket 7 6 5 3 8 1 2 4 
+bucket 6 5 3 7 8 2 4 1 
+bucket 5 8 7 6 2 1 3 4 
+values  0.15	0.175	0.2	0.225	0.25
+targets 0.8523	0.8523	0.8523	0.8523	0.8523
+improving parameter /Constant/decomp_num_steps curently set to 1
+1-5
+/Constant/decomp_num_steps: checking values 1	2	3	4	5
+retrieve accuracy from previous computation
+bucket 6 7 8 3 5 1 2 4 
+bucket 8 6 7 3 5 2 4 1 
+bucket 7 6 8 2 5 3 1 4 
+bucket 5 6 7 2 3 8 4 1 
+values  1	2	3	4	5
+targets 0.8523	0.8434	0.8398	0.8430	0.8411
+improving parameter /Constant/dss_end curently set to 4
+1-4
+/Constant/dss_end: checking values 1	2	3	4
+bucket 8 6 7 5 3 4 2 1 
+bucket 5 6 7 3 8 1 4 2 
+bucket 7 6 8 3 5 2 1 4 
+retrieve accuracy from previous computation
+values  1	2	3	4
+targets 0.7693	0.7700	0.8063	0.8523
+improving parameter /Constant/dss_start curently set to 3
+1-3
+/Constant/dss_start: checking values 1	2	3
+bucket 7 5 8 6 3 1 2 4 
+bucket 7 6 8 5 1 4 3 2 
+retrieve accuracy from previous computation
+values  1	2	3
+targets 0.8396	0.8365	0.8523
+improving parameter /Constant/ass_start curently set to 2
+1-3
+/Constant/ass_start: checking values 1	2	3
+bucket 6 7 8 5 3 4 2 1 
+retrieve accuracy from previous computation
+bucket 7 6 8 3 4 5 2 1 
+values  1	2	3
+targets 0.8490	0.8523	0.8363
+improving parameter /Constant/ass_end curently set to 1
+0-4
+/Constant/ass_end: checking values 0	1	2	3	4
+bucket 6 5 8 7 3 4 2 1 
+retrieve accuracy from previous computation
+bucket 5 7 3 6 8 2 1 4 
+bucket 7 6 5 8 3 1 4 2 
+bucket 6 7 8 5 3 4 1 2 
+values  0	1	2	3	4
+targets 0.8488	0.8523	0.8438	0.8068	0.7786
+improving parameter /Constant/ass_upwindow_size curently set to 30
+1-50
+/Constant/ass_upwindow_size: checking values 1	13	25	37	50
+bucket 7 6 5 8 3 4 1 2 
+bucket 6 5 8 4 2 3 7 1 
+bucket 6 5 7 8 4 2 3 1 
+bucket 8 6 5 7 2 3 1 4 
+bucket 6 7 8 5 3 4 1 2 
+values  1	13	25	37	50
+targets 0.7911	0.8315	0.8434	0.8345	0.7090
+improving parameter /IntronModel/d curently set to 525
+100-950
+/IntronModel/d: checking values 100	312	525	737	950
+bucket 6 7 8 5 3 1 4 2 
+bucket 6 5 7 8 3 4 2 1 
+retrieve accuracy from previous computation
+bucket 6 8 7 3 5 4 1 2 
+bucket 8 6 7 5 3 1 2 4 
+values  100	312	525	737	950
+targets 0.8408	0.8490	0.8523	0.8332	0.8492
+improving parameter /IntronModel/ass_motif_memory curently set to 3
+0-3
+/IntronModel/ass_motif_memory: checking values 0	1	2	3
+bucket 6 5 7 3 4 8 1 2 
+bucket 8 6 7 5 3 4 1 2 
+bucket 6 7 3 8 1 5 4 2 
+retrieve accuracy from previous computation
+values  0	1	2	3
+targets 0.8057	0.8314	0.8295	0.8523
+improving parameter /IntronModel/ass_motif_radius curently set to 3
+0-4
+/IntronModel/ass_motif_radius: checking values 0	1	2	3	4
+bucket 6 8 7 3 5 4 2 1 
+bucket 5 6 8 7 3 2 1 4 
+bucket 7 8 3 5 6 4 1 2 
+retrieve accuracy from previous computation
+bucket 6 7 8 5 3 4 1 2 
+values  0	1	2	3	4
+targets 0.8322	0.8406	0.8423	0.8523	0.8391
+improving parameter /ExonModel/tis_motif_memory curently set to 2
+0-3
+/ExonModel/tis_motif_memory: checking values 0	1	2	3
+bucket 5 6 7 8 4 3 1 2 
+bucket 6 8 2 7 4 5 3 1 
+retrieve accuracy from previous computation
+bucket 6 8 7 3 5 4 1 2 
+values  0	1	2	3
+targets 0.8399	0.8427	0.8523	0.8339
+improving parameter /ExonModel/tis_motif_radius curently set to 2
+0-3
+/ExonModel/tis_motif_radius: checking values 0	1	2	3
+bucket 6 7 8 5 3 2 4 1 
+bucket 6 8 7 3 4 5 2 1 
+retrieve accuracy from previous computation
+bucket 6 8 7 5 3 4 2 1 
+values  0	1	2	3
+targets 0.8422	0.8483	0.8523	0.8484
+improving parameter /Constant/trans_init_window curently set to 12
+0-25
+/Constant/trans_init_window: checking values 0	6	12	18	25
+bucket 6 8 5 7 3 4 1 2 
+bucket 6 5 3 8 7 2 4 1 
+retrieve accuracy from previous computation
+bucket 6 8 7 3 5 4 2 1 
+bucket 6 5 3 7 8 4 2 1 
+values  0	6	12	18	25
+targets 0.8433	0.8421	0.8523	0.8418	0.8389
+improving parameter /Constant/init_coding_len curently set to 18
+0-18
+/Constant/init_coding_len: checking values 0	4	9	13	18
+bucket 7 5 6 8 3 4 2 1 
+found improvement: 0.9850, 0.9277, 0.8596, 0.7628, 0.7404, 0.6474, -1.00, -1.00, optimal target: 0.8527
+changing /Constant/init_coding_len to 0
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	2
+/Constant/ass_end	1
+/Constant/ass_upwindow_size	30
+/IntronModel/d	525
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	2
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	12
+/Constant/init_coding_len	0
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	6
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	4
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00505
+/ExonModel/minPatSum	350
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_parameters.cfg...
+bucket 8 5 6 7 3 2 4 1 
+bucket 8 5 7 6 3 1 2 4 
+bucket 6 7 5 8 3 4 2 1 
+retrieve accuracy from previous computation
+values  0	4	9	13	18
+targets 0.8527	0.8472	0.8498	0.8523	0.8523
+/Constant/init_coding_len: checking values 1	2	3	4
+bucket 8 6 5 3 7 4 2 1 
+bucket 6 7 8 5 3 1 2 4 
+bucket 6 8 7 5 3 1 2 4 
+retrieve accuracy from previous computation
+values  1	2	3	4
+targets 0.8485	0.8482	0.8446	0.8472
+improving parameter /ExonModel/patpseudocount curently set to 5.0
+0.5-5
+/ExonModel/patpseudocount: checking values 0.5	1.625	2.75	3.875	5
+bucket 6 5 8 7 3 4 1 2 
+bucket 6 8 7 5 3 4 2 1 
+bucket 6 7 8 5 3 2 1 4 
+bucket 6 7 8 1 5 2 4 3 
+bucket 7 6 5 3 8 4 2 1 
+values  0.5	1.625	2.75	3.875	5
+targets 0.8468	0.8472	0.8511	0.8527	0.8527
+improving parameter /ExonModel/etpseudocount curently set to 3
+0-10
+/ExonModel/etpseudocount: checking values 0	2	5	7	10
+bucket 7 6 8 1 3 5 4 2 
+bucket 6 7 5 3 8 4 1 2 
+bucket 6 7 5 8 4 3 1 2 
+bucket 6 8 5 7 3 4 2 1 
+bucket 6 7 5 8 4 1 3 2 
+values  0	2	5	7	10
+targets 0.8527	0.8527	0.8527	0.8527	0.8527
+improving parameter /ExonModel/etorder curently set to 2
+0-3
+/ExonModel/etorder: checking values 0	1	2	3
+bucket 6 7 5 8 3 2 4 1 
+bucket 6 7 5 8 2 4 1 3 
+retrieve accuracy from previous computation
+bucket 5 7 6 8 4 1 3 2 
+values  0	1	2	3
+targets 0.8527	0.8527	0.8527	0.8527
+improving parameter /Constant/intterm_coding_len curently set to 6
+0-13
+/Constant/intterm_coding_len: checking values 0	3	6	9	13
+bucket 7 5 6 4 3 8 1 2 
+bucket 6 3 8 2 5 7 4 1 
+retrieve accuracy from previous computation
+bucket 7 8 3 2 6 4 1 5 
+bucket 6 7 5 8 3 2 4 1 
+values  0	3	6	9	13
+targets 0.8482	0.8480	0.8527	0.8489	0.8415
+improving parameter /ExonModel/slope_of_bandwidth curently set to 0.3
+0.05-0.6
+/ExonModel/slope_of_bandwidth: checking values 0.05	0.1875	0.325	0.4625	0.6
+bucket 7 6 8 3 5 2 1 4 
+bucket 5 7 8 3 4 6 2 1 
+bucket 8 6 7 5 3 2 4 1 
+bucket 6 7 8 5 4 2 1 3 
+bucket 6 8 7 5 3 4 2 1 
+values  0.05	0.1875	0.325	0.4625	0.6
+targets 0.8400	0.8477	0.8514	0.8512	0.8512
+improving parameter /ExonModel/minwindowcount curently set to 4
+1-15
+/ExonModel/minwindowcount: checking values 1	4	8	11	15
+bucket 8 6 7 5 3 2 4 1 
+found improvement: 0.9850, 0.9291, 0.8630, 0.7644, 0.7500, 0.6556, -1.00, -1.00, optimal target: 0.8557
+changing /ExonModel/minwindowcount to 1
+/Constant/dss_end	4
+/Constant/dss_start	3
+/Constant/ass_start	2
+/Constant/ass_end	1
+/Constant/ass_upwindow_size	30
+/IntronModel/d	525
+/IntronModel/ass_motif_memory	3
+/IntronModel/ass_motif_radius	3
+/ExonModel/tis_motif_memory	2
+/ExonModel/tis_motif_radius	2
+/Constant/trans_init_window	12
+/Constant/init_coding_len	0
+/ExonModel/patpseudocount	5.0
+/ExonModel/etpseudocount	3
+/ExonModel/etorder	2
+/Constant/intterm_coding_len	6
+/ExonModel/slope_of_bandwidth	0.3
+/ExonModel/minwindowcount	1
+/IGenicModel/patpseudocount	5.0
+/IntronModel/patpseudocount	5.0
+/IntronModel/slope_of_bandwidth	0.4
+/IntronModel/minwindowcount	4
+/IntronModel/asspseudocount	0.00266
+/IntronModel/dsspseudocount	0.0005
+/IntronModel/dssneighborfactor	0.00505
+/ExonModel/minPatSum	350
+/Constant/probNinCoding	0.23
+/Constant/decomp_num_steps	1
+Writing new parameters to /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_parameters.cfg...
+retrieve accuracy from previous computation
+bucket 6 7 5 8 3 4 1 2 
+bucket 7 5 6 8 2 3 1 4 
+bucket 7 6 8 5 3 4 2 1 
+values  1	4	8	11	15
+targets 0.8557	0.8527	0.8494	0.8475	0.8475
+/ExonModel/minwindowcount: checking values 2	3	4
+bucket 7 6 8 3 1 4 2 5 
+bucket 8 3 7 6 5 4 1 2 
+retrieve accuracy from previous computation
+values  2	3	4
+targets 0.8491	0.8525	0.8527
+improving parameter /IGenicModel/patpseudocount curently set to 5.0
+0.5-7
+/IGenicModel/patpseudocount: checking values 0.5	2.125	3.75	5.375	7
+bucket 6 7 8 5 3 1 4 2 
+bucket 7 6 8 5 3 4 2 1 
+bucket 6 7 8 4 5 2 3 1 
+bucket 6 8 7 3 5 1 4 2 
+bucket 8 6 3 7 2 1 4 5 
+values  0.5	2.125	3.75	5.375	7
+targets 0.8557	0.8557	0.8557	0.8557	0.8557
+improving parameter /IntronModel/patpseudocount curently set to 5.0
+0.5-7
+/IntronModel/patpseudocount: checking values 0.5	2.125	3.75	5.375	7
+bucket 6 8 7 5 2 3 4 1 
+bucket 6 7 8 5 3 4 1 2 
+bucket 6 8 7 5 3 4 1 2 
+bucket 7 8 6 3 5 4 2 1 
+bucket 6 7 5 8 3 1 2 4 
+values  0.5	2.125	3.75	5.375	7
+targets 0.8557	0.8557	0.8557	0.8557	0.8557
+improving parameter /IntronModel/slope_of_bandwidth curently set to 0.4
+0.05-0.6
+/IntronModel/slope_of_bandwidth: checking values 0.05	0.1875	0.325	0.4625	0.6
+bucket 6 2 4 5 1 7 8 3 
+bucket 7 5 6 3 8 2 4 1 
+bucket 8 7 6 3 5 4 2 1 
+bucket 8 7 6 3 5 1 4 2 
+bucket 6 7 8 5 3 4 1 2 
+values  0.05	0.1875	0.325	0.4625	0.6
+targets 0.8485	0.8517	0.8485	0.8526	0.8526
+improving parameter /IntronModel/minwindowcount curently set to 4
+1-8
+/IntronModel/minwindowcount: checking values 1	2	4	6	8
+bucket 6 5 8 7 3 2 4 1 
+bucket 6 8 7 3 5 2 1 4 
+retrieve accuracy from previous computation
+bucket 7 6 8 4 3 5 2 1 
+bucket 6 5 8 2 7 4 3 1 
+values  1	2	4	6	8
+targets 0.8557	0.8557	0.8557	0.8526	0.8526
+improving parameter /IntronModel/asspseudocount curently set to 0.00266
+0.0005-0.03
+/IntronModel/asspseudocount: checking values 0.0005	0.007875	0.01525	0.022625	0.03
+bucket 6 7 8 5 3 1 4 2 
+bucket 7 6 8 5 3 1 4 2 
+bucket 8 6 7 5 2 1 3 4 
+bucket 6 7 8 5 3 1 2 4 
+bucket 7 6 8 5 2 3 1 4 
+values  0.0005	0.007875	0.01525	0.022625	0.03
+targets 0.8557	0.8557	0.8557	0.8557	0.8557
+improving parameter /IntronModel/dsspseudocount curently set to 0.0005
+0.0002-0.04
+/IntronModel/dsspseudocount: checking values 0.0002	0.01015	0.0201	0.03005	0.04
+bucket 8 6 3 5 7 4 1 2 
+bucket 7 6 8 5 3 1 2 4 
+bucket 7 6 8 5 4 2 3 1 
+bucket 6 7 8 5 3 4 2 1 
+bucket 8 6 7 3 5 2 4 1 
+values  0.0002	0.01015	0.0201	0.03005	0.04
+targets 0.8557	0.8467	0.8269	0.8236	0.8199
+improving parameter /IntronModel/dssneighborfactor curently set to 0.00505
+0.0001-0.01
+/IntronModel/dssneighborfactor: checking values 0.0001	0.002575	0.00505	0.007525	0.01
+bucket 6 8 7 2 1 3 5 4 
+bucket 7 5 8 6 4 1 3 2 
+retrieve accuracy from previous computation
+bucket 7 5 6 8 3 4 2 1 
+bucket 7 6 3 8 5 4 1 2 
+values  0.0001	0.002575	0.00505	0.007525	0.01
+targets 0.8236	0.8517	0.8557	0.8504	0.8454
+improving parameter /ExonModel/minPatSum curently set to 350
+100-600
+/ExonModel/minPatSum: checking values 100	225	350	475	600
+bucket 6 7 8 3 2 5 4 1 
+bucket 7 8 5 6 3 4 1 2 
+retrieve accuracy from previous computation
+bucket 6 7 5 8 1 3 2 4 
+bucket 6 8 7 5 3 4 1 2 
+values  100	225	350	475	600
+targets 0.8491	0.8491	0.8557	0.8444	0.8495
+improving parameter /Constant/probNinCoding curently set to 0.23
+0.15-.25
+/Constant/probNinCoding: checking values 0.15	0.175	0.2	0.225	0.25
+bucket 6 8 5 3 7 2 1 4 
+bucket 8 6 7 3 5 2 1 4 
+bucket 6 7 8 5 3 4 1 2 
+bucket 6 5 7 3 1 4 8 2 
+bucket 6 7 5 8 3 2 4 1 
+values  0.15	0.175	0.2	0.225	0.25
+targets 0.8557	0.8557	0.8557	0.8557	0.8557
+improving parameter /Constant/decomp_num_steps curently set to 1
+1-5
+/Constant/decomp_num_steps: checking values 1	2	3	4	5
+retrieve accuracy from previous computation
+bucket 7 3 2 5 6 1 8 4 
+bucket 7 3 8 1 5 2 4 6 
+bucket 6 7 5 8 4 3 2 1 
+bucket 8 7 3 6 4 5 1 2 
+values  1	2	3	4	5
+targets 0.8557	0.8515	0.8449	0.8481	0.8480
+improving parameter /Constant/dss_end curently set to 4
+1-4
+/Constant/dss_end: checking values 1	2	3	4
+bucket 7 8 6 5 3 4 2 1 
+bucket 6 7 8 3 5 4 1 2 
+bucket 6 8 3 4 5 7 1 2 
+retrieve accuracy from previous computation
+values  1	2	3	4
+targets 0.7692	0.7727	0.8188	0.8557
+improving parameter /Constant/dss_start curently set to 3
+1-3
+/Constant/dss_start: checking values 1	2	3
+bucket 6 5 8 7 2 1 3 4 
+bucket 7 6 8 5 3 1 2 4 
+retrieve accuracy from previous computation
+values  1	2	3
+targets 0.8391	0.8323	0.8557
+improving parameter /Constant/ass_start curently set to 2
+1-3
+/Constant/ass_start: checking values 1	2	3
+bucket 7 6 5 8 3 4 2 1 
+retrieve accuracy from previous computation
+bucket 6 5 7 3 8 4 1 2 
+values  1	2	3
+targets 0.8479	0.8557	0.8415
+improving parameter /Constant/ass_end curently set to 1
+0-4
+/Constant/ass_end: checking values 0	1	2	3	4
+bucket 6 7 8 5 3 4 2 1 
+retrieve accuracy from previous computation
+bucket 7 6 8 5 3 1 4 2 
+bucket 6 8 7 3 5 2 1 4 
+bucket 7 8 5 6 1 3 4 2 
+values  0	1	2	3	4
+targets 0.8519	0.8557	0.8445	0.8130	0.7781
+improving parameter /Constant/ass_upwindow_size curently set to 30
+1-50
+/Constant/ass_upwindow_size: checking values 1	13	25	37	50
+bucket 8 6 7 3 5 4 2 1 
+bucket 7 5 3 6 8 4 1 2 
+bucket 6 8 7 3 4 5 1 2 
+bucket 6 8 7 5 2 1 3 4 
+bucket 6 8 5 7 2 3 4 1 
+values  1	13	25	37	50
+targets 0.7761	0.8325	0.8483	0.8324	0.7054
+improving parameter /IntronModel/d curently set to 525
+100-950
+/IntronModel/d: checking values 100	312	525	737	950
+bucket 6 7 8 2 3 5 1 4 
+bucket 6 8 7 3 4 5 2 1 
+retrieve accuracy from previous computation
+bucket 7 6 8 5 3 2 4 1 
+bucket 8 7 6 5 3 2 4 1 
+values  100	312	525	737	950
+targets 0.8421	0.8456	0.8557	0.8419	0.8542
+improving parameter /IntronModel/ass_motif_memory curently set to 3
+0-3
+/IntronModel/ass_motif_memory: checking values 0	1	2	3
+bucket 6 8 7 3 5 4 1 2 
+bucket 8 7 6 5 3 2 4 1 
+bucket 7 8 6 5 4 2 3 1 
+retrieve accuracy from previous computation
+values  0	1	2	3
+targets 0.8022	0.8307	0.8243	0.8557
+improving parameter /IntronModel/ass_motif_radius curently set to 3
+0-4
+/IntronModel/ass_motif_radius: checking values 0	1	2	3	4
+bucket 6 7 8 3 5 4 2 1 
+bucket 7 8 3 6 5 4 2 1 
+bucket 6 7 8 3 4 2 5 1 
+retrieve accuracy from previous computation
+bucket 6 8 7 5 3 4 2 1 
+values  0	1	2	3	4
+targets 0.8281	0.8358	0.8404	0.8557	0.8397
+improving parameter /ExonModel/tis_motif_memory curently set to 2
+0-3
+/ExonModel/tis_motif_memory: checking values 0	1	2	3
+bucket 8 7 6 5 3 4 2 1 
+bucket 3 6 5 7 2 4 8 1 
+retrieve accuracy from previous computation
+bucket 8 6 5 7 4 3 2 1 
+values  0	1	2	3
+targets 0.8331	0.8417	0.8557	0.8323
+improving parameter /ExonModel/tis_motif_radius curently set to 2
+0-3
+/ExonModel/tis_motif_radius: checking values 0	1	2	3
+bucket 7 8 1 6 3 5 4 2 
+bucket 6 8 3 1 7 5 4 2 
+retrieve accuracy from previous computation
+bucket 8 7 5 6 3 4 1 2 
+values  0	1	2	3
+targets 0.8396	0.8442	0.8557	0.8522
+improving parameter /Constant/trans_init_window curently set to 12
+0-25
+/Constant/trans_init_window: checking values 0	6	12	18	25
+bucket 6 8 7 3 5 4 2 1 
+bucket 6 8 7 5 4 2 3 1 
+retrieve accuracy from previous computation
+bucket 7 6 8 5 3 1 4 2 
+bucket 6 7 8 5 4 3 2 1 
+values  0	6	12	18	25
+targets 0.8321	0.8479	0.8557	0.8511	0.8392
+improving parameter /Constant/init_coding_len curently set to 0
+0-18
+/Constant/init_coding_len: checking values 0	4	9	13	18
+retrieve accuracy from previous computation
+bucket 6 5 3 1 4 2 7 8 
+bucket 6 7 5 8 3 2 4 1 
+bucket 8 6 7 3 5 2 4 1 
+bucket 7 6 5 3 8 2 1 4 
+values  0	4	9	13	18
+targets 0.8557	0.8484	0.8510	0.8553	0.8550
+improving parameter /ExonModel/patpseudocount curently set to 5.0
+0.5-5
+/ExonModel/patpseudocount: checking values 0.5	1.625	2.75	3.875	5
+bucket 6 7 8 4 3 2 5 1 
+bucket 7 6 5 3 8 1 4 2 
+bucket 6 7 5 8 3 4 2 1 
+bucket 6 7 8 3 5 4 2 1 
+bucket 6 5 7 8 3 2 4 1 
+values  0.5	1.625	2.75	3.875	5
+targets 0.8498	0.8508	0.8541	0.8557	0.8557
+improving parameter /ExonModel/etpseudocount curently set to 3
+0-10
+/ExonModel/etpseudocount: checking values 0	2	5	7	10
+bucket 6 7 8 3 5 4 2 1 
+bucket 7 6 3 8 5 4 2 1 
+bucket 7 8 5 3 1 6 4 2 
+bucket 6 7 8 5 3 1 2 4 
+bucket 5 8 6 3 7 2 1 4 
+values  0	2	5	7	10
+targets 0.8557	0.8557	0.8557	0.8557	0.8557
+improving parameter /ExonModel/etorder curently set to 2
+0-3
+/ExonModel/etorder: checking values 0	1	2	3
+bucket 6 5 8 7 3 4 2 1 
+bucket 6 7 3 5 8 4 2 1 
+retrieve accuracy from previous computation
+bucket 6 8 7 3 5 1 4 2 
+values  0	1	2	3
+targets 0.8557	0.8557	0.8557	0.8557
+improving parameter /Constant/intterm_coding_len curently set to 6
+0-13
+/Constant/intterm_coding_len: checking values 0	3	6	9	13
+bucket 8 6 5 7 3 4 1 2 
+bucket 7 8 6 5 3 4 1 2 
+retrieve accuracy from previous computation
+bucket 6 7 8 5 3 1 2 4 
+bucket 6 7 8 5 3 4 2 1 
+values  0	3	6	9	13
+targets 0.8494	0.8492	0.8557	0.8462	0.8423
+improving parameter /ExonModel/slope_of_bandwidth curently set to 0.3
+0.05-0.6
+/ExonModel/slope_of_bandwidth: checking values 0.05	0.1875	0.325	0.4625	0.6
+bucket 6 3 8 5 7 4 2 1 
+bucket 6 8 5 7 3 2 4 1 
+bucket 7 8 5 6 3 4 1 2 
+bucket 7 8 3 6 5 2 4 1 
+bucket 6 7 8 3 5 4 2 1 
+values  0.05	0.1875	0.325	0.4625	0.6
+targets 0.8416	0.8507	0.8526	0.8493	0.8478
+improving parameter /ExonModel/minwindowcount curently set to 1
+1-15
+/ExonModel/minwindowcount: checking values 1	4	8	11	15
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  1	4	8	11	15
+targets 0.8557	0.8527	0.8494	0.8475	0.8475
+improving parameter /IGenicModel/patpseudocount curently set to 5.0
+0.5-7
+/IGenicModel/patpseudocount: checking values 0.5	2.125	3.75	5.375	7
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.5	2.125	3.75	5.375	7
+targets 0.8557	0.8557	0.8557	0.8557	0.8557
+improving parameter /IntronModel/patpseudocount curently set to 5.0
+0.5-7
+/IntronModel/patpseudocount: checking values 0.5	2.125	3.75	5.375	7
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.5	2.125	3.75	5.375	7
+targets 0.8557	0.8557	0.8557	0.8557	0.8557
+improving parameter /IntronModel/slope_of_bandwidth curently set to 0.4
+0.05-0.6
+/IntronModel/slope_of_bandwidth: checking values 0.05	0.1875	0.325	0.4625	0.6
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.05	0.1875	0.325	0.4625	0.6
+targets 0.8485	0.8517	0.8485	0.8526	0.8526
+improving parameter /IntronModel/minwindowcount curently set to 4
+1-8
+/IntronModel/minwindowcount: checking values 1	2	4	6	8
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  1	2	4	6	8
+targets 0.8557	0.8557	0.8557	0.8526	0.8526
+improving parameter /IntronModel/asspseudocount curently set to 0.00266
+0.0005-0.03
+/IntronModel/asspseudocount: checking values 0.0005	0.007875	0.01525	0.022625	0.03
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.0005	0.007875	0.01525	0.022625	0.03
+targets 0.8557	0.8557	0.8557	0.8557	0.8557
+improving parameter /IntronModel/dsspseudocount curently set to 0.0005
+0.0002-0.04
+/IntronModel/dsspseudocount: checking values 0.0002	0.01015	0.0201	0.03005	0.04
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.0002	0.01015	0.0201	0.03005	0.04
+targets 0.8557	0.8467	0.8269	0.8236	0.8199
+improving parameter /IntronModel/dssneighborfactor curently set to 0.00505
+0.0001-0.01
+/IntronModel/dssneighborfactor: checking values 0.0001	0.002575	0.00505	0.007525	0.01
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.0001	0.002575	0.00505	0.007525	0.01
+targets 0.8236	0.8517	0.8557	0.8504	0.8454
+improving parameter /ExonModel/minPatSum curently set to 350
+100-600
+/ExonModel/minPatSum: checking values 100	225	350	475	600
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  100	225	350	475	600
+targets 0.8491	0.8491	0.8557	0.8444	0.8495
+improving parameter /Constant/probNinCoding curently set to 0.23
+0.15-.25
+/Constant/probNinCoding: checking values 0.15	0.175	0.2	0.225	0.25
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.15	0.175	0.2	0.225	0.25
+targets 0.8557	0.8557	0.8557	0.8557	0.8557
+improving parameter /Constant/decomp_num_steps curently set to 1
+1-5
+/Constant/decomp_num_steps: checking values 1	2	3	4	5
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  1	2	3	4	5
+targets 0.8557	0.8515	0.8449	0.8481	0.8480
+improving parameter /Constant/dss_end curently set to 4
+1-4
+/Constant/dss_end: checking values 1	2	3	4
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  1	2	3	4
+targets 0.7692	0.7727	0.8188	0.8557
+improving parameter /Constant/dss_start curently set to 3
+1-3
+/Constant/dss_start: checking values 1	2	3
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  1	2	3
+targets 0.8391	0.8323	0.8557
+improving parameter /Constant/ass_start curently set to 2
+1-3
+/Constant/ass_start: checking values 1	2	3
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  1	2	3
+targets 0.8479	0.8557	0.8415
+improving parameter /Constant/ass_end curently set to 1
+0-4
+/Constant/ass_end: checking values 0	1	2	3	4
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0	1	2	3	4
+targets 0.8519	0.8557	0.8445	0.8130	0.7781
+improving parameter /Constant/ass_upwindow_size curently set to 30
+1-50
+/Constant/ass_upwindow_size: checking values 1	13	25	37	50
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  1	13	25	37	50
+targets 0.7761	0.8325	0.8483	0.8324	0.7054
+improving parameter /IntronModel/d curently set to 525
+100-950
+/IntronModel/d: checking values 100	312	525	737	950
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  100	312	525	737	950
+targets 0.8421	0.8456	0.8557	0.8419	0.8542
+improving parameter /IntronModel/ass_motif_memory curently set to 3
+0-3
+/IntronModel/ass_motif_memory: checking values 0	1	2	3
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0	1	2	3
+targets 0.8022	0.8307	0.8243	0.8557
+improving parameter /IntronModel/ass_motif_radius curently set to 3
+0-4
+/IntronModel/ass_motif_radius: checking values 0	1	2	3	4
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0	1	2	3	4
+targets 0.8281	0.8358	0.8404	0.8557	0.8397
+improving parameter /ExonModel/tis_motif_memory curently set to 2
+0-3
+/ExonModel/tis_motif_memory: checking values 0	1	2	3
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0	1	2	3
+targets 0.8331	0.8417	0.8557	0.8323
+improving parameter /ExonModel/tis_motif_radius curently set to 2
+0-3
+/ExonModel/tis_motif_radius: checking values 0	1	2	3
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0	1	2	3
+targets 0.8396	0.8442	0.8557	0.8522
+improving parameter /Constant/trans_init_window curently set to 12
+0-25
+/Constant/trans_init_window: checking values 0	6	12	18	25
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0	6	12	18	25
+targets 0.8321	0.8479	0.8557	0.8511	0.8392
+improving parameter /Constant/init_coding_len curently set to 0
+0-18
+/Constant/init_coding_len: checking values 0	4	9	13	18
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0	4	9	13	18
+targets 0.8557	0.8484	0.8510	0.8553	0.8550
+improving parameter /ExonModel/patpseudocount curently set to 5.0
+0.5-5
+/ExonModel/patpseudocount: checking values 0.5	1.625	2.75	3.875	5
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.5	1.625	2.75	3.875	5
+targets 0.8498	0.8508	0.8541	0.8557	0.8557
+improving parameter /ExonModel/etpseudocount curently set to 3
+0-10
+/ExonModel/etpseudocount: checking values 0	2	5	7	10
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0	2	5	7	10
+targets 0.8557	0.8557	0.8557	0.8557	0.8557
+improving parameter /ExonModel/etorder curently set to 2
+0-3
+/ExonModel/etorder: checking values 0	1	2	3
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0	1	2	3
+targets 0.8557	0.8557	0.8557	0.8557
+improving parameter /Constant/intterm_coding_len curently set to 6
+0-13
+/Constant/intterm_coding_len: checking values 0	3	6	9	13
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0	3	6	9	13
+targets 0.8494	0.8492	0.8557	0.8462	0.8423
+improving parameter /ExonModel/slope_of_bandwidth curently set to 0.3
+0.05-0.6
+/ExonModel/slope_of_bandwidth: checking values 0.05	0.1875	0.325	0.4625	0.6
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.05	0.1875	0.325	0.4625	0.6
+targets 0.8416	0.8507	0.8526	0.8493	0.8478
+improving parameter /ExonModel/minwindowcount curently set to 1
+1-15
+/ExonModel/minwindowcount: checking values 1	4	8	11	15
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  1	4	8	11	15
+targets 0.8557	0.8527	0.8494	0.8475	0.8475
+improving parameter /IGenicModel/patpseudocount curently set to 5.0
+0.5-7
+/IGenicModel/patpseudocount: checking values 0.5	2.125	3.75	5.375	7
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.5	2.125	3.75	5.375	7
+targets 0.8557	0.8557	0.8557	0.8557	0.8557
+improving parameter /IntronModel/patpseudocount curently set to 5.0
+0.5-7
+/IntronModel/patpseudocount: checking values 0.5	2.125	3.75	5.375	7
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.5	2.125	3.75	5.375	7
+targets 0.8557	0.8557	0.8557	0.8557	0.8557
+improving parameter /IntronModel/slope_of_bandwidth curently set to 0.4
+0.05-0.6
+/IntronModel/slope_of_bandwidth: checking values 0.05	0.1875	0.325	0.4625	0.6
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.05	0.1875	0.325	0.4625	0.6
+targets 0.8485	0.8517	0.8485	0.8526	0.8526
+improving parameter /IntronModel/minwindowcount curently set to 4
+1-8
+/IntronModel/minwindowcount: checking values 1	2	4	6	8
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  1	2	4	6	8
+targets 0.8557	0.8557	0.8557	0.8526	0.8526
+improving parameter /IntronModel/asspseudocount curently set to 0.00266
+0.0005-0.03
+/IntronModel/asspseudocount: checking values 0.0005	0.007875	0.01525	0.022625	0.03
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.0005	0.007875	0.01525	0.022625	0.03
+targets 0.8557	0.8557	0.8557	0.8557	0.8557
+improving parameter /IntronModel/dsspseudocount curently set to 0.0005
+0.0002-0.04
+/IntronModel/dsspseudocount: checking values 0.0002	0.01015	0.0201	0.03005	0.04
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.0002	0.01015	0.0201	0.03005	0.04
+targets 0.8557	0.8467	0.8269	0.8236	0.8199
+improving parameter /IntronModel/dssneighborfactor curently set to 0.00505
+0.0001-0.01
+/IntronModel/dssneighborfactor: checking values 0.0001	0.002575	0.00505	0.007525	0.01
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.0001	0.002575	0.00505	0.007525	0.01
+targets 0.8236	0.8517	0.8557	0.8504	0.8454
+improving parameter /ExonModel/minPatSum curently set to 350
+100-600
+/ExonModel/minPatSum: checking values 100	225	350	475	600
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  100	225	350	475	600
+targets 0.8491	0.8491	0.8557	0.8444	0.8495
+improving parameter /Constant/probNinCoding curently set to 0.23
+0.15-.25
+/Constant/probNinCoding: checking values 0.15	0.175	0.2	0.225	0.25
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.15	0.175	0.2	0.225	0.25
+targets 0.8557	0.8557	0.8557	0.8557	0.8557
+improving parameter /Constant/decomp_num_steps curently set to 1
+1-5
+/Constant/decomp_num_steps: checking values 1	2	3	4	5
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  1	2	3	4	5
+targets 0.8557	0.8515	0.8449	0.8481	0.8480
+improving parameter /Constant/dss_end curently set to 4
+1-4
+/Constant/dss_end: checking values 1	2	3	4
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  1	2	3	4
+targets 0.7692	0.7727	0.8188	0.8557
+improving parameter /Constant/dss_start curently set to 3
+1-3
+/Constant/dss_start: checking values 1	2	3
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  1	2	3
+targets 0.8391	0.8323	0.8557
+improving parameter /Constant/ass_start curently set to 2
+1-3
+/Constant/ass_start: checking values 1	2	3
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  1	2	3
+targets 0.8479	0.8557	0.8415
+improving parameter /Constant/ass_end curently set to 1
+0-4
+/Constant/ass_end: checking values 0	1	2	3	4
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0	1	2	3	4
+targets 0.8519	0.8557	0.8445	0.8130	0.7781
+improving parameter /Constant/ass_upwindow_size curently set to 30
+1-50
+/Constant/ass_upwindow_size: checking values 1	13	25	37	50
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  1	13	25	37	50
+targets 0.7761	0.8325	0.8483	0.8324	0.7054
+improving parameter /IntronModel/d curently set to 525
+100-950
+/IntronModel/d: checking values 100	312	525	737	950
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  100	312	525	737	950
+targets 0.8421	0.8456	0.8557	0.8419	0.8542
+improving parameter /IntronModel/ass_motif_memory curently set to 3
+0-3
+/IntronModel/ass_motif_memory: checking values 0	1	2	3
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0	1	2	3
+targets 0.8022	0.8307	0.8243	0.8557
+improving parameter /IntronModel/ass_motif_radius curently set to 3
+0-4
+/IntronModel/ass_motif_radius: checking values 0	1	2	3	4
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0	1	2	3	4
+targets 0.8281	0.8358	0.8404	0.8557	0.8397
+improving parameter /ExonModel/tis_motif_memory curently set to 2
+0-3
+/ExonModel/tis_motif_memory: checking values 0	1	2	3
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0	1	2	3
+targets 0.8331	0.8417	0.8557	0.8323
+improving parameter /ExonModel/tis_motif_radius curently set to 2
+0-3
+/ExonModel/tis_motif_radius: checking values 0	1	2	3
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0	1	2	3
+targets 0.8396	0.8442	0.8557	0.8522
+improving parameter /Constant/trans_init_window curently set to 12
+0-25
+/Constant/trans_init_window: checking values 0	6	12	18	25
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0	6	12	18	25
+targets 0.8321	0.8479	0.8557	0.8511	0.8392
+improving parameter /Constant/init_coding_len curently set to 0
+0-18
+/Constant/init_coding_len: checking values 0	4	9	13	18
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0	4	9	13	18
+targets 0.8557	0.8484	0.8510	0.8553	0.8550
+improving parameter /ExonModel/patpseudocount curently set to 5.0
+0.5-5
+/ExonModel/patpseudocount: checking values 0.5	1.625	2.75	3.875	5
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.5	1.625	2.75	3.875	5
+targets 0.8498	0.8508	0.8541	0.8557	0.8557
+improving parameter /ExonModel/etpseudocount curently set to 3
+0-10
+/ExonModel/etpseudocount: checking values 0	2	5	7	10
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0	2	5	7	10
+targets 0.8557	0.8557	0.8557	0.8557	0.8557
+improving parameter /ExonModel/etorder curently set to 2
+0-3
+/ExonModel/etorder: checking values 0	1	2	3
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0	1	2	3
+targets 0.8557	0.8557	0.8557	0.8557
+improving parameter /Constant/intterm_coding_len curently set to 6
+0-13
+/Constant/intterm_coding_len: checking values 0	3	6	9	13
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0	3	6	9	13
+targets 0.8494	0.8492	0.8557	0.8462	0.8423
+improving parameter /ExonModel/slope_of_bandwidth curently set to 0.3
+0.05-0.6
+/ExonModel/slope_of_bandwidth: checking values 0.05	0.1875	0.325	0.4625	0.6
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.05	0.1875	0.325	0.4625	0.6
+targets 0.8416	0.8507	0.8526	0.8493	0.8478
+improving parameter /ExonModel/minwindowcount curently set to 1
+1-15
+/ExonModel/minwindowcount: checking values 1	4	8	11	15
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  1	4	8	11	15
+targets 0.8557	0.8527	0.8494	0.8475	0.8475
+improving parameter /IGenicModel/patpseudocount curently set to 5.0
+0.5-7
+/IGenicModel/patpseudocount: checking values 0.5	2.125	3.75	5.375	7
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.5	2.125	3.75	5.375	7
+targets 0.8557	0.8557	0.8557	0.8557	0.8557
+improving parameter /IntronModel/patpseudocount curently set to 5.0
+0.5-7
+/IntronModel/patpseudocount: checking values 0.5	2.125	3.75	5.375	7
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.5	2.125	3.75	5.375	7
+targets 0.8557	0.8557	0.8557	0.8557	0.8557
+improving parameter /IntronModel/slope_of_bandwidth curently set to 0.4
+0.05-0.6
+/IntronModel/slope_of_bandwidth: checking values 0.05	0.1875	0.325	0.4625	0.6
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.05	0.1875	0.325	0.4625	0.6
+targets 0.8485	0.8517	0.8485	0.8526	0.8526
+improving parameter /IntronModel/minwindowcount curently set to 4
+1-8
+/IntronModel/minwindowcount: checking values 1	2	4	6	8
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  1	2	4	6	8
+targets 0.8557	0.8557	0.8557	0.8526	0.8526
+improving parameter /IntronModel/asspseudocount curently set to 0.00266
+0.0005-0.03
+/IntronModel/asspseudocount: checking values 0.0005	0.007875	0.01525	0.022625	0.03
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.0005	0.007875	0.01525	0.022625	0.03
+targets 0.8557	0.8557	0.8557	0.8557	0.8557
+improving parameter /IntronModel/dsspseudocount curently set to 0.0005
+0.0002-0.04
+/IntronModel/dsspseudocount: checking values 0.0002	0.01015	0.0201	0.03005	0.04
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.0002	0.01015	0.0201	0.03005	0.04
+targets 0.8557	0.8467	0.8269	0.8236	0.8199
+improving parameter /IntronModel/dssneighborfactor curently set to 0.00505
+0.0001-0.01
+/IntronModel/dssneighborfactor: checking values 0.0001	0.002575	0.00505	0.007525	0.01
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.0001	0.002575	0.00505	0.007525	0.01
+targets 0.8236	0.8517	0.8557	0.8504	0.8454
+improving parameter /ExonModel/minPatSum curently set to 350
+100-600
+/ExonModel/minPatSum: checking values 100	225	350	475	600
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  100	225	350	475	600
+targets 0.8491	0.8491	0.8557	0.8444	0.8495
+improving parameter /Constant/probNinCoding curently set to 0.23
+0.15-.25
+/Constant/probNinCoding: checking values 0.15	0.175	0.2	0.225	0.25
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  0.15	0.175	0.2	0.225	0.25
+targets 0.8557	0.8557	0.8557	0.8557	0.8557
+improving parameter /Constant/decomp_num_steps curently set to 1
+1-5
+/Constant/decomp_num_steps: checking values 1	2	3	4	5
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+retrieve accuracy from previous computation
+values  1	2	3	4	5
+targets 0.8557	0.8515	0.8449	0.8481	0.8480
+Making final training with the optimized parameters.
+etraining --species=aspergillus_melleus_cbs_546.65 --AUGUSTUS_CONFIG_PATH=/bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/ --/augustus/verbosity=0 --/ExonModel/verbosity=0 --/IGenicModel/verbosity=0 --/IntronModel/verbosity=0 --/UtrModel/verbosity=0 --/genbank/verbosity=0 tmp_opt_aspergillus_melleus_cbs_546.65/curtrain  
+# Read in 667 genbank sequences.
+Quantiles of the GC contents in the training set:
+0%	0.442
+5%	0.474	10%	0.486
+15%	0.492	20%	0.497
+25%	0.502	30%	0.504
+35%	0.508	40%	0.51
+45%	0.513	50%	0.517
+55%	0.519	60%	0.523
+65%	0.526	70%	0.529
+75%	0.533	80%	0.536
+85%	0.539	90%	0.543
+95%	0.551	100%	0.592
+HMM-training the parameters...
+i= 0 bc= (0.237, 0.263, 0.263, 0.237)
+ ** building model for exons *EXON*
+gene g_7-T1 transcr. 1 in sequence contig1_776256-778494: Initial exon has length < 3!
+gene g_40-T1 transcr. 1 in sequence contig1_3921174-3923611: Initial exon has length < 3!
+start codon frequencies: ATG(665)
+# admissible start codons and their probabilities: ATG(1), CTG(0), TTG(0)
+ number of bases in the reading frames: 324021 324621 324768
+--- frame = 0 ---    minPatSum = 350
+--- frame = 1 ---    minPatSum = 350
+--- frame = 2 ---    minPatSum = 350
+--- initial frame = 0 ---    minPatSum = 350
+--- initial frame = 1 ---    minPatSum = 350
+--- initial frame = 2 ---    minPatSum = 350
+--- internal exon terminal frame = 0 ---    minPatSum = 350
+--- internal exon terminal frame = 1 ---    minPatSum = 350
+--- internal exon terminal frame = 2 ---    minPatSum = 350
+single, initial, internal, terminal mean exon lengths :
+n.a.	275	331	544
+single exon : 0
+initial exon 0 : 254
+initial exon 1 : 241
+initial exon 2 : 170
+internal exon 0 : 310
+internal exon 1 : 233
+internal exon 2 : 248
+terminal exon : 667
+Frequency of stop codons:
+tag:  195 (0.292)
+taa:  223 (0.334)
+tga:  249 (0.373)
+end *EXON*
+Storing parameters to file...
+Writing exon model parameters [1] to file /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/ab_initio_parameters/augustus/species/aspergillus_melleus_cbs_546.65/aspergillus_melleus_cbs_546.65_exon_probs.pbl.

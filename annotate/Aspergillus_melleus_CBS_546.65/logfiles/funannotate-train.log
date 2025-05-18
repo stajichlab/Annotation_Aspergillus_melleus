@@ -1,0 +1,58 @@
+[06/13/21 23:16:58]: /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/bin/funannotate train -i /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/genomes/Aspergillus_melleus_CBS_546.65.masked.fasta -o annotate/Aspergillus_melleus_CBS_546.65 --jaccard_clip --species Aspergillus melleus --isolate CBS 546.65 --cpus 24 --memory 128G --pasa_db mysql --trinity lib/RNASeq/Aspergillus_melleus/assembled.fasta --left lib/RNASeq/Aspergillus_melleus/Forward.fq.gz --right lib/RNASeq/Aspergillus_melleus/Reverse.fq.gz
+
+[06/13/21 23:16:58]: OS: CentOS Linux 7, 64 cores, ~ 528 GB RAM. Python: 3.8.5
+[06/13/21 23:16:58]: Running 1.8.8
+[06/13/21 23:17:01]: Input reads: ('annotate/Aspergillus_melleus_CBS_546.65/training/left.fq.gz', 'annotate/Aspergillus_melleus_CBS_546.65/training/right.fq.gz', None)
+[06/13/21 23:17:01]: Trimmomatic will be skipped
+[06/13/21 23:17:01]: Quality trimmed reads: ('annotate/Aspergillus_melleus_CBS_546.65/training/left.fq.gz', 'annotate/Aspergillus_melleus_CBS_546.65/training/right.fq.gz', None)
+[06/13/21 23:17:01]: FASTQ headers seem compatible with Trinity
+[06/13/21 23:17:01]: Read normalization will be skipped
+[06/13/21 23:17:01]: Normalized reads: ('annotate/Aspergillus_melleus_CBS_546.65/training/left.fq.gz', 'annotate/Aspergillus_melleus_CBS_546.65/training/right.fq.gz', None)
+[06/13/21 23:17:01]: Long reads: (None, None, None)
+[06/13/21 23:17:01]: Long reads FASTA format: (None, None, None)
+[06/13/21 23:17:01]: Long SeqCleaned reads: (None, None, None)
+[06/13/21 23:17:02]: 33,620 existing Trinity results found: annotate/Aspergillus_melleus_CBS_546.65/training/trinity.fasta
+[06/13/21 23:17:02]: Removing poly-A sequences from trinity transcripts using seqclean
+[06/13/21 23:17:02]: Existing SeqClean output found: annotate/Aspergillus_melleus_CBS_546.65/training/annotate/Aspergillus_melleus_CBS_546.65/training/trinity.fasta.clean
+[06/13/21 23:17:02]: Existing BAM alignments found: annotate/Aspergillus_melleus_CBS_546.65/training/trinity.alignments.bam, annotate/Aspergillus_melleus_CBS_546.65/training/transcript.alignments.bam
+[06/13/21 23:17:02]: Using Kallisto TPM data to determine which PASA gene models to select at each locus
+[06/13/21 23:17:02]: Building Kallisto index
+[06/13/21 23:17:02]: /opt/linux/centos/7.x/x86_64/pkgs/PASA/2.4.1/misc_utilities/gff3_file_to_proteins.pl annotate/Aspergillus_melleus_CBS_546.65/training/pasa.step1.gff3 annotate/Aspergillus_melleus_CBS_546.65/training/genome.fasta cDNA
+[06/13/21 23:17:13]: kallisto index -i annotate/Aspergillus_melleus_CBS_546.65/training/getBestModel/bestModel annotate/Aspergillus_melleus_CBS_546.65/training/getBestModel/transcripts.fa
+[06/13/21 23:17:38]: 
+[build] loading fasta file annotate/Aspergillus_melleus_CBS_546.65/training/getBestModel/transcripts.fa
+[build] k-mer length: 31
+[build] warning: clipped off poly-A tail (longer than 10)
+        from 2 target sequences
+[build] counting k-mers ... done.
+[build] building target de Bruijn graph ...  done 
+[build] creating equivalence classes ...  done
+[build] target de Bruijn graph has 13736 contigs and contains 9568818 k-mers 
+
+
+[06/13/21 23:17:38]: Mapping reads using pseudoalignment in Kallisto
+[06/13/21 23:17:38]: kallisto quant -i annotate/Aspergillus_melleus_CBS_546.65/training/getBestModel/bestModel -o annotate/Aspergillus_melleus_CBS_546.65/training/getBestModel/kallisto --plaintext -t 24 annotate/Aspergillus_melleus_CBS_546.65/training/left.fq.gz annotate/Aspergillus_melleus_CBS_546.65/training/right.fq.gz
+[06/13/21 23:21:21]: 
+[quant] fragment length distribution will be estimated from the data
+[index] k-mer length: 31
+[index] number of targets: 9,896
+[index] number of k-mers: 9,568,818
+[index] number of equivalence classes: 14,959
+[quant] running in paired-end mode
+[quant] will process pair 1: annotate/Aspergillus_melleus_CBS_546.65/training/left.fq.gz
+                             annotate/Aspergillus_melleus_CBS_546.65/training/right.fq.gz
+[quant] finding pseudoalignments for the reads ... done
+[quant] processed 37,462,126 reads, 7,828,481 reads pseudoaligned
+[quant] estimated average fragment length: 300.98
+[   em] quantifying the abundances ... done
+[   em] the Expectation-Maximization algorithm ran for 865 rounds
+
+
+[06/13/21 23:21:21]: Parsing expression value results. Keeping best transcript at each locus.
+[06/13/21 23:22:23]: Wrote 4,641 PASA gene models
+[06/13/21 23:22:23]: PASA database name: Aspergillus_melleus_CBS_546.65
+[06/13/21 23:22:23]: Trinity/PASA has completed, you are now ready to run funanotate predict, for example:
+
+  funannotate predict -i /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/genomes/Aspergillus_melleus_CBS_546.65.masked.fasta \
+            -o annotate/Aspergillus_melleus_CBS_546.65 -s "Aspergillus melleus" --isolate CBS 546.65 --cpus 24
+

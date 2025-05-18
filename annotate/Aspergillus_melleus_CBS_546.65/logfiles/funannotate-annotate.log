@@ -1,0 +1,41 @@
+[06/15/21 15:09:46]: /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/bin/funannotate annotate --sbt /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/lib/authors_reference.sbt --busco_db fungi_odb10 -i annotate/Aspergillus_melleus_CBS_546.65 --species Aspergillus melleus --strain CBS 546.65 --cpus 16
+
+[06/15/21 15:09:46]: OS: CentOS Linux 7, 64 cores, ~ 528 GB RAM. Python: 3.8.5
+[06/15/21 15:09:46]: Running 1.8.8
+[06/15/21 15:09:46]: Found existing output directory annotate/Aspergillus_melleus_CBS_546.65. Warning, will re-use any intermediate files found.
+[06/15/21 15:09:46]: Parsing input files
+[06/15/21 15:09:46]: Existing tbl found: annotate/Aspergillus_melleus_CBS_546.65/update_results/Aspergillus_melleus_CBS_546.65.tbl
+[06/15/21 15:09:53]: TBL file: annotate/Aspergillus_melleus_CBS_546.65/annotate_misc/genome.tbl
+[06/15/21 15:09:53]: GFF3 file: annotate/Aspergillus_melleus_CBS_546.65/update_results/Aspergillus_melleus_CBS_546.65.gff3
+[06/15/21 15:09:53]: Proteins file: annotate/Aspergillus_melleus_CBS_546.65/annotate_misc/genome.proteins.fasta
+[06/15/21 15:10:03]: Adding Functional Annotation to Aspergillus melleus, NCBI accession: None
+[06/15/21 15:10:03]: Annotation consists of: 13,060 gene models
+[06/15/21 15:10:03]: 13,182 protein records loaded
+[06/15/21 15:10:04]: Existing Pfam-A results found: annotate/Aspergillus_melleus_CBS_546.65/annotate_misc/annotations.pfam.txt
+[06/15/21 15:10:04]: 14,805 annotations added
+[06/15/21 15:10:04]: Running Diamond blastp search of UniProt DB version 2021_02
+[06/15/21 15:10:06]: 1,007 valid gene/product annotations from 1,732 total
+[06/15/21 15:10:06]: Existing Eggnog-mapper results found: annotate/Aspergillus_melleus_CBS_546.65/annotate_misc/eggnog.emapper.annotations
+[06/15/21 15:10:06]: Parsing EggNog Annotations
+[06/15/21 15:10:06]: EggNog annotation detected as emapper vc0923a4 and DB prefix ENOG50
+[06/15/21 15:10:06]: EggNog Parse ERROR: I1I15_001898-T1	886293.Sinac_4070	3.23e-13	79.3	COG0666@1|root,COG1357@1|root,COG0666@2|Bacteria,COG1357@2|Bacteria	COG0666@2|Bacteria / COG1357@2|Bacteria	G / S	response to abiotic stimulus / protein homooligomerization	COG0666@2|Bacteria / COG1357@2|Bacteria	G / S	response to abiotic stimulus / protein homooligomerization	anK3	-	-	-	-	-	-	-	-	-	-	-	Ank_2,Ank_3,Ank_4,Ank_5,Astacin,DUF2314,DUF2963,PG_binding_1,SUFU
+[06/15/21 15:10:06]: 25,181 COG and EggNog annotations added
+[06/15/21 15:10:06]: Combining UniProt/EggNog gene and product names using Gene2Product version 1.70
+[06/15/21 15:10:07]: 3,015 gene name and product description annotations added
+[06/15/21 15:10:07]: Existing MEROPS results found: annotate/Aspergillus_melleus_CBS_546.65/annotate_misc/annotations.merops.txt
+[06/15/21 15:10:07]: 375 annotations added
+[06/15/21 15:10:07]: Existing CAZYme results found: annotate/Aspergillus_melleus_CBS_546.65/annotate_misc/annotations.dbCAN.txt
+[06/15/21 15:10:07]: 560 annotations added
+[06/15/21 15:10:07]: Existing BUSCO2 results found: annotate/Aspergillus_melleus_CBS_546.65/annotate_misc/annotations.busco.txt
+[06/15/21 15:10:07]: 766 annotations added
+[06/15/21 15:10:07]: Existing Phobius results found: annotate/Aspergillus_melleus_CBS_546.65/annotate_misc/phobius.results.txt
+[06/15/21 15:10:07]: Existing SignalP results found: annotate/Aspergillus_melleus_CBS_546.65/annotate_misc/signalp.results.txt
+[06/15/21 15:10:07]: 1,069 secretome and 2,882 transmembane annotations added
+[06/15/21 15:10:07]: Found 0 duplicated annotations, adding 103,451 valid annotations
+[06/15/21 15:10:09]: Parsing tbl file: /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/annotate_misc/genome.tbl
+[06/15/21 15:10:09]: Converting to final Genbank format, good luck!
+[06/15/21 15:10:09]: /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/bin/python3.8 /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/lib/python3.8/site-packages/funannotate/aux_scripts/tbl2asn_parallel.py -i annotate/Aspergillus_melleus_CBS_546.65/annotate_misc/tbl2asn/genome.tbl -f annotate/Aspergillus_melleus_CBS_546.65/annotate_misc/tbl2asn/genome.fsa -o annotate/Aspergillus_melleus_CBS_546.65/annotate_misc/tbl2asn --sbt /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/lib/authors_reference.sbt -d discrepency.report.txt -s Aspergillus melleus -t -l paired-ends -v 1 -c 16 --strain CBS 546.65
+[06/15/21 15:11:41]: Creating AGP file and corresponding contigs file
+[06/15/21 15:11:41]: perl /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/lib/python3.8/site-packages/funannotate/aux_scripts/fasta2agp.pl Aspergillus_melleus_CBS_546.65.scaffolds.fa
+[06/15/21 15:11:43]: Writing genome annotation table.
+[06/15/21 15:14:04]: Funannotate annotate has completed successfully!

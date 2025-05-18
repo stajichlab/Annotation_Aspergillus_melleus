@@ -1,0 +1,8 @@
+[06/14/21 10:04:18]: /opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/lib/python3.8/site-packages/funannotate/aux_scripts/funannotate-p2g.py -p ../annotate/Aspergillus_melleus_CBS_546.65/predict_misc/proteins.combined.fa -g /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/genome.softmasked.fa -o ../annotate/Aspergillus_melleus_CBS_546.65/predict_misc/protein_alignments.gff3 --maxintron 3000 --cpus 24 --exonerate_pident 80 --ploidy 1 -f diamond --tblastn_out ../annotate/Aspergillus_melleus_CBS_546.65/predict_misc/p2g.diamond.out --logfile ../annotate/Aspergillus_melleus_CBS_546.65/logfiles/funannotate-p2g.log
+
+[06/14/21 10:04:20]: Mapping 551,648 proteins to genome using diamond and exonerate
+[06/14/21 10:04:20]: Diamond v2.0.8; Exonerate v2.4.0
+[06/14/21 10:04:20]: diamond makedb --threads 24 --in /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/proteins.combined.fa --db diamond
+[06/14/21 10:04:23]: diamond blastx --threads 24 -q /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/annotate/Aspergillus_melleus_CBS_546.65/predict_misc/genome.softmasked.fa --db diamond -o diamond.matches.tab -e 1e-10 -k 0 --more-sensitive --unal 0 -c 1 -F 15 -f 6 sseqid slen sstart send qseqid qlen qstart qend pident length evalue score qcovhsp qframe
+[06/14/21 10:07:29]: Found 348,155 preliminary alignments --> aligning with exonerate
+[06/14/21 11:20:45]: Exonerate finished: found 1,298 alignments
