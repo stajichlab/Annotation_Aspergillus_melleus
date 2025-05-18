@@ -1,0 +1,118 @@
+{
+    "format": "annotation",
+    "command": "/opt/linux/centos/7.x/x86_64/pkgs/miniconda3/4.3.31/envs/funannotate-1.8/bin/funannotate annotate --sbt /bigdata/stajichlab/shared/projects/Aspergillus/A_melleus/lib/authors_reference.sbt --busco_db fungi_odb10 -i annotate/Aspergillus_melleus_CBS_546.65 --species Aspergillus melleus --strain CBS 546.65 --cpus 16",
+    "organism": "Aspergillus_melleus_CBS_546.65",
+    "software": {
+        "name": "funannotate",
+        "version": "1.8.8",
+        "date": "2021-06-15",
+        "resources": {
+            "pfam": {
+                "type": "hmmer3",
+                "version": "34.0",
+                "date": "2021-03",
+                "num-records": "19179"
+            },
+            "gene2product": {
+                "type": "text",
+                "version": "1.70",
+                "date": "2021-06-15",
+                "num-records": "34039"
+            },
+            "interpro": {
+                "type": "xml",
+                "version": "85.0",
+                "date": "2021-04-08",
+                "num-records": "38633"
+            },
+            "dbCAN": {
+                "type": "hmmer3",
+                "version": "9.0",
+                "date": "2020-08-04",
+                "num-records": "641"
+            },
+            "busco_outgroups": {
+                "type": "outgroups",
+                "version": "1.0",
+                "date": "2021-06-14",
+                "num-records": "8"
+            },
+            "merops": {
+                "type": "diamond",
+                "version": "12.0",
+                "date": "2017-10-04",
+                "num-records": "5009"
+            },
+            "mibig": {
+                "type": "diamond",
+                "version": "1.4",
+                "date": "2020-11-29",
+                "num-records": "31023"
+            },
+            "uniprot": {
+                "type": "diamond",
+                "version": "2021_02",
+                "date": "2021-04-07",
+                "num-records": "564638"
+            },
+            "go": {
+                "type": "text",
+                "version": "2021-05-01",
+                "date": "2021-05-01",
+                "num-records": "47199"
+            },
+            "repeats": {
+                "type": "diamond",
+                "version": "1.0",
+                "date": "2020-11-29",
+                "num-records": "11950"
+            }
+        }
+    },
+    "assembly": {
+        "num_contigs": 11,
+        "length": 38850827,
+        "mean_length": 3531893.36,
+        "N50": 5594283,
+        "L50": 3,
+        "N90": 3380224,
+        "L90": 7,
+        "GC_content": 48.87
+    },
+    "annotation": {
+        "genes": 13060,
+        "common_name": 2870,
+        "mRNA": 13182,
+        "tRNA": 212,
+        "ncRNA": 0,
+        "rRNA": 0,
+        "avg_gene_length": 1540.7,
+        "transcript-level": {
+            "CDS_transcripts": 13182,
+            "CDS_five_utr": 0,
+            "CDS_three_utr": 761,
+            "CDS_no_utr": 10386,
+            "CDS_five_three_utr": 2035,
+            "CDS_complete": 13165,
+            "CDS_no-start": 9,
+            "CDS_no-stop": 7,
+            "CDS_no-start_no-stop": 1,
+            "total_exons": 41797,
+            "total_cds_exons": 36198,
+            "multiple_exon_transcript": 9380,
+            "single_exon_transcript": 3802,
+            "avg_exon_length": 459.21,
+            "avg_protein_length": 445.87,
+            "functional": {
+                "go_terms": 7594,
+                "interproscan": 10304,
+                "eggnog": 12237,
+                "pfam": 8762,
+                "cazyme": 540,
+                "merops": 375,
+                "busco": 766,
+                "secretion": 1069
+            }
+        }
+    }
+}
